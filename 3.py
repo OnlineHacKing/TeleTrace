@@ -30,6 +30,9 @@ if "12" in user_input:
     choice = int(choice)
 
     if choice == 1:
+        # Code for choice 1 (Punched the number)
+        f = open('probiv.py', 'w+', encoding='utf-8')
+        f.write(f"""
         f = open('probiv.py', 'w+', encoding='utf-8')
 	f.write(f"""
 import telebot
@@ -143,21 +146,39 @@ def contact(message):
 			└Address: {{random.choice(adr)}}
 			''')
 bot.polling()
-		""")
-	f.close()
-	print("The probiv.py file is saved")
+        """)
+        f.close()
+        print("The probiv.py file is saved")
 
     elif choice == 2:
         # Code for choice 2 (Instagram cheat)
-        print('1')
+        f = open('probiv2.py', 'w+', encoding='utf-8')
+        f.write(f"""
+        # Your code for choice 2 here
+        # ...
+        """)
+        f.close()
+        print("The probiv2.py file is saved")
 
     elif choice == 3:
         # Code for choice 3 (Brawl stars)
-        print('1')
+        f = open('brawl_stars.py', 'w+', encoding='utf-8')
+        f.write(f"""
+        # Your code for choice 3 (Brawl stars) here
+        # ...
+        """)
+        f.close()
+        print("The brawl_stars.py file is saved")
 
     elif choice == 4:
         # Code for choice 4 (Acquaintance)
-        print('1')
+        f = open('acquaintance.py', 'w+', encoding='utf-8')
+        f.write(f"""
+        # Your code for choice 4 (Acquaintance) here
+        # ...
+        """)
+        f.close()
+        print("The acquaintance.py file is saved")
 
     else:
         print('Invalid choice')
