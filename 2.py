@@ -46,7 +46,7 @@ if "12" in user_input:
         # Perform actions based on user's choice
         if choice == 1:
             f = open('probiv.py', 'w+', encoding='utf-8')
-	f.write(f"""
+	f.write('''
 import telebot
 from telebot import types
 import time
@@ -158,13 +158,13 @@ def contact(message):
 			└Address: {{random.choice(adr)}}
 			''')
 bot.polling()
-		""")
+		''')
 	f.close()
 	print("The probiv.py file is saved")
             print("Punched the number mode code has been written to 'probiv.py'")
         elif choice == 2:
             f = open('nacr.py', 'w+', encoding='utf-8')
-	f.write(f"""
+	f.write('''
 import telebot
 from telebot import types
 import time
@@ -300,7 +300,7 @@ def entr(message):
 bot.polling()
 
 
-		""")
+		''')
 	f.close()
 	print("File nacr.py saved")
             print("Instagram cheat mode placeholder.")
