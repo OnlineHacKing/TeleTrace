@@ -1,6 +1,8 @@
 import colorama
 from colorama import Fore, Back, Style
 import os
+
+correct_number = "12"
 os.system('clear')
 print(Fore.RED + '''
          _,.-------.,_
@@ -29,7 +31,13 @@ print(Fore.RED + '''
 
 
 	''')
-input(Fore.GREEN + "Press Enter")
+while True:
+    # Ask the user to enter a number
+    user_input = input(Fore.GREEN + "Enter a number: ")
+
+    # Check if the entered number contains "12" as a substring
+    if correct_number in user_input:
+        print("Correct! You entered a number containing '12'.")
 os.system('clear')
 print(Fore.MAGENTA + ' _____    _   _   _   _ ' + Fore.YELLOW + ' __  __   ______ ')
 print(Fore.MAGENTA + '|  __ \  | \ | | | \ | |' + Fore.YELLOW + '|  \/  | |  ____|')
@@ -712,3 +720,8 @@ bot.polling()
 		""")
 	f.close()
 	print("btc.py file saved")
+
+ break  # Exit the loop if the correct number is entered
+    else:
+        print("Sorry, the entered number does not contain '12'. Please try again.")
+
