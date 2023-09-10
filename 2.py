@@ -492,5 +492,7 @@ bot.polling()
         print("The brawl.py file is saved")
  
 
-    else:
+     else:
         print('Invalid choice')
+else:
+    print('Sorry, the entered number does not contain 12')
