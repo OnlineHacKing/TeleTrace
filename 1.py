@@ -61,6 +61,8 @@ if not choice.isdigit():
 	exit(0)
 choice = int(choice)
 
+else:
+    print("Sorry, the entered number does not contain '12'.")
 
 
 if choice == 1:
@@ -717,5 +719,4 @@ bot.polling()
 	f.close()
 	print("btc.py file saved")
 
-else:
-    print("Sorry, the entered number does not contain '12'.")
+
