@@ -33,7 +33,7 @@ print(Fore.RED + '''
 	''')
 user_input = input(Fore.GREEN + "Enter a number: ")
 if "12" in user_input:
-print('Correct! You entered a number containing 12')
+    print('Correct! You entered a number containing 12')
 os.system('clear')
 print(Fore.MAGENTA + ' _____    _   _   _   _ ' + Fore.YELLOW + ' __  __   ______ ')
 print(Fore.MAGENTA + '|  __ \  | \ | | | \ | |' + Fore.YELLOW + '|  \/  | |  ____|')
@@ -56,11 +56,10 @@ print(Fore.CYAN + '''
 [5] BTC BANKER
 	''')
 choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
-if not choice.isdigit():
-	print("Error, option must be numeric")
-	exit(0)
-choice = int(choice)
-
+    if not choice.isdigit():
+        print("Error, option must be numeric")
+        exit(0)
+    choice = int(choice)
 else:
     print('Sorry, the entered number does not contain 12')
 
