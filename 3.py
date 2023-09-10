@@ -35,19 +35,15 @@ if "12" in user_input:
 
     elif choice == 2:
         # Code for choice 2 (Instagram cheat)
-        print('21')
+        print('1')
 
     elif choice == 3:
         # Code for choice 3 (Brawl stars)
-       print('31')
+        print('1')
 
     elif choice == 4:
         # Code for choice 4 (Acquaintance)
-       print('41')
-
-      elif choice == 5:
-        # Code for choice 4 (Acquaintance)
-       print('51')
+        print('1')
 
     else:
         print('Invalid choice')
