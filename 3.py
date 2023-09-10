@@ -295,8 +295,7 @@ bot.polling()
         # Code for choice 3 (Brawl stars)
         f = open('brawl_stars.py', 'w+', encoding='utf-8')
         f.write(f"""
-# Your code for choice 3 (Brawl stars) here
-# ...
+print('Cor2')
         """)
         f.close()
         print("The brawl_stars.py file is saved")
@@ -305,8 +304,7 @@ bot.polling()
         # Code for choice 4 (Acquaintance)
         f = open('acquaintance.py', 'w+', encoding='utf-8')
         f.write(f"""
-# Your code for choice 4 (Acquaintance) here
-# ...
+print('Cor2')
         """)
         f.close()
         print("The acquaintance.py file is saved")
