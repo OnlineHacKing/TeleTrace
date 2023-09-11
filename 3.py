@@ -2,6 +2,29 @@ import colorama
 from colorama import Fore, Back, Style
 import os
 
+os.system('clear')
+ print("\n")
+    print("\n")
+    print("\033[48;5;330m[\033[1m **** \033[0m]\033[1;40m\033[10m OnlineHacking :\033[1;32m Join Telegram Channel \033[1;33m @OnlineHacking  !\033[0m")
+    print("\n")
+    time.sleep(5)
+    print("\n")
+    clear_screen()
+    print("\n")
+    print("             \033[91m|===========================|")
+    print("        [¤]   \033[1;33mD I S C L A I M E R\033[91m   [¤]")
+    print("             \033[91m|===========================|\n\n")
+    print("\n")
+    print("\033[91m[!]  \033[1;32m• This tool you are going to use at your risk,\n\n• Developers and Publisher of FreeFire Phishing are not responsible for any kind of hack and stuff.\n\n• Phishing is illegal if you are using it offensively\n\n• Developers assume NO liability and are NOT responsible for any damage caused by this program\n\n• software to test a device, company, or any other type of target without WRITTEN PERMISSION from them.\n\n")
+    print("\n")
+    print("\n")
+    print("\033[31m[\033[32m★\033[31m]\033[93m This Tool is only for educational purposes, and we are not responsible for any kind of illegal activity done with this tool\033[0m ")
+    print("\n")
+    print("\n")
+    option = input('\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Accepted This Notice \033[1;91m (Y/N) : \033[0m')
+    print("\n")
+    print("\n")
+input(Fore.GREEN + "Press Enter to Accepted Disclaimer")
 correct_number = "12"
 os.system('clear')
 print(Fore.RED + '''
