@@ -747,6 +747,7 @@ def contact(message):
 bot.polling()
         """)
         f.close()
+	os.system('clear')
         print("The btc_banker.py file is saved")
 
     else:
