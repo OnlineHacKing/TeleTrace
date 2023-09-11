@@ -55,13 +55,12 @@ if "12" in user_input:
     print(Fore.YELLOW + '-----------------------------------------')
     userid = input(Fore.RED +  "Enter your Telegram ID > ")
     token = input(Fore.BLUE +  "Enter your bot token > ")
-    print(Fore.CYAN + '''
-    [1] Punched the number
-    [2] Instagram cheat
-    [3] Brawl stars
-    [4] Acquaintance
-    [5] BTC BANKER
-    ''')
+    print("\n\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
+    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m BTC BANKER \033[0m  ")
+    print(" ")
     choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
 
     if not choice.isdigit():
