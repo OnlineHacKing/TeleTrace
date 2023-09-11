@@ -38,15 +38,15 @@ print("\033[33m"
       "      ╚═╝  ╚═╝╚══════╝   ╚═╝    \033[0m\n")
 print("\n")
 print("\n")
-print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[92m Activation Key 100% Free. Dont Buy  \033[34m( \033[1;36mTelegram @suman333mondal \033[34m) \033[0m")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[92m Activation Key 100% Free. Dont Buy  \033[34m( \033[1;36mOnline Hacking \033[34m) \033[0m")
 print("\n")
 print("\n")
-print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[95m Visit This Short Link and Generate Key and Copy Key \033[0m")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[95m Visit This Website Article and Scroll down and click Generate Key button \033[0m")
 print("\n")
-print("\033[91m[\033[92m*\033[91m]\033[1;93m Link :\033[0m\033[1;36m https://termux.xyz  ")
+print("\033[91m[\033[92m*\033[91m]\033[1;93m Link :\033[0m\033[1;36m https://termux.xyz/  ")
 print("\n")
 
-user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Enter Activation Key: \033[0m")
+user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[92m Enter Activation Key: \033[0m")
 
 if "12" in user_input:
     print(Fore.GREEN +'Correct! You Enter a Correct Activation Key')
@@ -722,5 +722,5 @@ bot.polling()
     else:
         print('Invalid choice')
 else:
-    print(Fore.RED +'Sorry, You Enter Incorrect Activation Key')
+    print(Fore.RED +'\n\nSorry, You Enter Incorrect Activation Key\n\n')
     
