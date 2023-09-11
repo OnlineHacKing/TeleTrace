@@ -758,7 +758,7 @@ bot.polling()
     print("\n")
     print("\033[92m[+] Now Type This Command:\033[93m python btc_banker.py \033[m \n\n ")
 	
-    else:
+else:
         print(' \n\n\033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m\n\n')
 
 else:
