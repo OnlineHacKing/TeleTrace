@@ -1,10 +1,11 @@
 import colorama
 from colorama import Fore, Back, Style
 import os
+import time
 
 os.system('clear')
-    print("\n")
-    print("\n")
+    print('\n')
+    print('\n')
     print("\033[48;5;330m[\033[1m **** \033[0m]\033[1;40m\033[10m OnlineHacking :\033[1;32m Join Telegram Channel \033[1;33m @OnlineHacking  !\033[0m")
     print("\n")
     time.sleep(5)
