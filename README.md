@@ -1,2 +1,2 @@
 # Coming soon
-rm -rf deanon && git clone https://github.com/OnlineHacKing/deanon && cd deanon && pip install -r requirements.txt && ls
+rm -rf TeleTrack && git clone https://github.com/OnlineHacKing/TeleTrack && cd TeleTrack && pip install -r requirements.txt && ls
