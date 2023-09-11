@@ -83,21 +83,23 @@ print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+ >>\033[0m")
 print("\033[95m    |S|U|M|A|N|")
 print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+ >>\033[0m")
 print("")
-    userid = input(Fore.RED +  "Enter your Telegram ID > ")
-    token = input(Fore.BLUE +  "Enter your bot token > ")
+
+userid = input(Fore.RED + "Enter your Telegram ID > ")
+token = input(Fore.BLUE + "Enter your bot token > ")
+
     print("\n\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
     print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m BTC BANKER \033[0m  ")
     print(" ")
-    choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
+    choice = input(Fore.MAGENTA + "Select the fake interface option:>>> ")
 
-    if not choice.isdigit():
-        print("Error, option must be numeric")
-        exit(0)
+if not choice.isdigit():
+    print("Error, option must be numeric")
+    exit(0)
 
-    choice = int(choice)
+choice = int(choice)
 
     if choice == 1:
         # Code for choice 1 (Punched the number)
