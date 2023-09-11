@@ -747,7 +747,7 @@ def contact(message):
 bot.polling()
         """)
         f.close()
-	print("\n\033[96m< < < ====================================================== > > >\033[0m\n ")
+        print("\n\033[96m< < < ====================================================== > > >\033[0m\n ")
         print("The btc_banker.py file is saved")
         print("Start This bot Typr python btc_banker.py \n\n")
 	
