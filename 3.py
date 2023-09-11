@@ -752,7 +752,7 @@ bot.polling()
         print("Start This bot Typr python btc_banker.py \n\n")
 	
     else:
-        print(' \033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m')
+        print(' \n\n\033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m\n\n')
 
 else:
     print(Fore.RED +'\033[1;91m\n\nSorry, You Enter Incorrect Activation Key\n\n')
