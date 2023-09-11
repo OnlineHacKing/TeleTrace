@@ -695,8 +695,7 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌ Authorize Your contact!')
-	
+			bot.send_message(message.chat.id, '❌ Authorize Your contact!')	
 bot.polling()
         """)
         f.close()
