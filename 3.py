@@ -49,7 +49,7 @@ print("\n")
 user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[92m Enter Activation Key: \033[0m")
 
 if "12" in user_input:
-    print(Fore.GREEN +'Correct! You Enter a Correct Activation Key')
+    print(Fore.GREEN +'\033[1;32m\n\nCorrect! You Enter a Correct Activation Key\n\n')
     time.sleep(3)
     os.system('clear')
     print(Fore.YELLOW + '-----------------------------------------')
@@ -722,5 +722,5 @@ bot.polling()
     else:
         print('Invalid choice')
 else:
-    print(Fore.RED +'\n\nSorry, You Enter Incorrect Activation Key\n\n')
+    print(Fore.RED +'\033[1;91m\n\nSorry, You Enter Incorrect Activation Key\n\n')
     
