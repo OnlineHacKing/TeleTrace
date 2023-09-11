@@ -30,7 +30,7 @@ os.system('clear')
 print(Fore.RED + '''
          _,.-------.,_
     ''')
-user_input = input(Fore.GREEN + "Enter a number: ")
+user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Enter Activation Key: \033[0m")
 if "12" in user_input:
     print('Correct! You entered a number containing 12')
     os.system('clear')
