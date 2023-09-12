@@ -3,8 +3,8 @@ from telebot import types
 import time
 import random
 
-ID = '{userid}'
-bot = telebot.TeleBot("{token}")
+ID = '661262775'
+bot = telebot.TeleBot("6264887049:AAHVKKKZA7bVnzi7VdML1WH_PGq4mRqpfrY")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 bot.send_message(ID, '!BOT STARTED!') 
 print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n")
