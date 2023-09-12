@@ -86,7 +86,7 @@ if "12" in user_input:
     token = input(Fore.BLUE +  "\033[91m[\033[92m*\033[91m]\033[95m Enter Your Bot Token \033[96m >>> \033[0m  ")
     print("")
     print("\033[96m< < < ====================================================== > > >\033[0m ")
-    print("\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Phone Number Info \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
@@ -102,7 +102,7 @@ if "12" in user_input:
 
     if choice == 1:
         # Code for choice 1 (Punched the number)
-        f = open('probiv.py', 'w+', encoding='utf-8')
+        f = open('numberinfo.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 from telebot import types
@@ -217,7 +217,16 @@ def contact(message):
 bot.polling()
         """)
         f.close()
-        print("The probiv.py file is saved")
+        os.system('clear')
+        print("\n\n")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;90m\033[0m\033[1;92m  !!    Bot Build Successfull    !!  \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        time.sleep(2)
+        print("\n")
+        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\n")
+        print("\033[92m[+] Now Type This Command:\033[93m python numberinfo.py \033[m \n\n ")
 
     elif choice == 2:
         # Code for choice 2 (Instagram cheat)
