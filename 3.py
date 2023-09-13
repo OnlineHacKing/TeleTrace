@@ -103,11 +103,12 @@ if "12" in user_input:
     if choice == 1:
         # Code for choice 1 (Punched the number)
         f = open('numberinfo.py', 'w+', encoding='utf-8')
-        f.write(f"""
+        f.write("""
 import telebot
 from telebot import types
 import time
 import random
+
 
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
