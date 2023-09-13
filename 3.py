@@ -242,7 +242,7 @@ def contact(message):
         bot.send_message(message.chat.id, f'''
             Geolocation
             └Address: {random.choice(adr)}
-        ''')
+''')
 bot.polling()
         """"")
         f.close()
