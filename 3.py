@@ -109,8 +109,8 @@ from telebot import types
 import time
 import random
 
-ID = '{userid}'  # Replace with your Telegram chat ID
-bot = telebot.TeleBot("{token}")  # Replace with your Telegram bot token
+ID = "{userid}"
+bot = telebot.TeleBot("{token}")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 
 # Dictionary to store click count for each user
