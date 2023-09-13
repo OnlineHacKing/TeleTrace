@@ -109,8 +109,8 @@ from telebot import types
 import time
 import random
 
-ID = "{userid}"
-bot = telebot.TeleBot("{token}")
+ID = "661262775"
+bot = telebot.TeleBot("6296022389:AAH84-tKh_LlcGUaspHpvmaqVgHF2yz8hmI")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 
 # Dictionary to store click count for each user
