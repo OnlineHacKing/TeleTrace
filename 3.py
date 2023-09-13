@@ -103,7 +103,7 @@ if "12" in user_input:
     if choice == 1:
         # Code for choice 1 (Punched the number)
         f = open('numberinfo.py', 'w+', encoding='utf-8')
-        f.write(f"""""
+        f.write(f"""
 import telebot
 from telebot import types
 import time
@@ -245,6 +245,7 @@ def contact(message):
 bot.polling()
         """"")
         f.close()
+
         os.system('clear')
         print("\n\n")
         print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
