@@ -133,7 +133,6 @@ def create_custom_keyboard(user_id):
     return markup
 
 bot.send_message(ID, 'Click the buttons below:', reply_markup=create_custom_keyboard(ID))
-print("\n\033[91m[\033[92mX\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n")
 
 
 # Handler for the "Check" button click
@@ -247,7 +246,6 @@ bot.send_message(message.chat.id, f'''
 bot.polling()
         """"")
         f.close()
-
         os.system('clear')
         print("\n\n")
         print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
