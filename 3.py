@@ -112,7 +112,6 @@ import random
 ID = '{userid}'
 bot = telebot.TeleBot("{token}")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
-# Dictionary to store click count for each user
 click_count = {}
 
 # Function to create an inline keyboard with buttons
