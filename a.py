@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-from module import function1
+from 4 import function1
 import time
 import random
 
