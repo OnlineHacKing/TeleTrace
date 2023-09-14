@@ -256,3 +256,10 @@ bot.polling()
         print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python numberinfo.py \033[m \n\n ")
+
+    else:
+        print(' \n\n\033[92m[\033[94m!\033[92m]\033[92m Invalid option Try Again !! \e[0m\n\n')
+
+else:
+    print(Fore.RED +'\033[1;91m\n\nSorry, You Enter Incorrect Activation Key\n\n')
+    
