@@ -244,7 +244,7 @@ def contact(message):
             └Address: {random.choice(adr)}
         ''')
 bot.polling()
-        """)
+""")
         f.close()
         os.system('clear')
         print("\n\n")
