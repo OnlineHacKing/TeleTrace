@@ -26,7 +26,9 @@ def create_custom_keyboard(user_id):
     
     return markup
 
-bot.send_message(ID, '⚠️ In use this bot you have to join our telegram channel./n/nAfter successful joining 2 telegram channel click check button ✅', reply_markup=create_custom_keyboard(ID))
+bot.send_message(ID, '⚠️ In use this bot you have to join our telegram channel. 
+
+After successful joining 2 telegram channel click check button ✅', reply_markup=create_custom_keyboard(ID))
 print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n")
 
 # Handler for the "Check" button click
