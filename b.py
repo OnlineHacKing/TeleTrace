@@ -1,4 +1,4 @@
-from file1 import ID, bot
+from file1 import ID, bot, start_bot
 import telebot
 from telebot import types
 import time
@@ -7,9 +7,6 @@ import random
 
 log = open('bot-log.txt', 'a+', encoding='utf-8')
 
-def start_bot():
-    bot.send_message(ID, '!BOT STARTED!')
-    print("Bot launched!")
 	
 @bot.message_handler(commands=['start'])
 def start(message):
