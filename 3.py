@@ -129,7 +129,7 @@ adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vino
 
     elif choice == 2:
         # Code for choice 2 (Instagram cheat)
-        f = open('instbot.py')
+        f = open('instbot.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 
