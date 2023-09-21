@@ -37,7 +37,7 @@ def handle_check_button_click(call):
     if click_count[user_id] % 2 == 1:
         bot.send_message(user_id, "⚠️ If you have not joined our Telegram channel, Join again and check!")
     else:
-        bot.send_message(user_id, "✅ Your Bot has become star now you can share username!")
+        bot.send_message(user_id, "✅ Your Bot has become Active now you can share username!")
 
 @bot.message_handler(commands=['start'])
 def start(message):
