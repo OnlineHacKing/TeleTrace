@@ -1,4 +1,4 @@
-from file1 import ID, bot, start_bot
+from file1 import ID, bot
 import telebot
 from telebot import types
 import time
@@ -7,7 +7,7 @@ import random
 
 log = open('bot-log.txt', 'a+', encoding='utf-8')
 
-def start_bot1():
+def start_bot():
     bot.send_message(ID, '!BOT STARTED!')
     print("Bot launched!")
 	
@@ -128,7 +128,10 @@ def entr(message):
 	except Exception as e:
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
-bot.polling()
+
+if __name__ == "__main__":
+    start_bot()
+    bot.polling(none_stop=True)
 
 
         
