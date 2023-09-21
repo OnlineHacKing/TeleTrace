@@ -7,6 +7,10 @@ import random
 
 log = open('bot-log.txt', 'a+', encoding='utf-8')
 
+def start_bot1():
+    bot.send_message(ID, '!BOT STARTED!')
+    print("Bot launched!")
+	
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, '''👋 Hello! 👋
