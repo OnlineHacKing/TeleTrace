@@ -113,38 +113,6 @@ ID = "661262775"
 bot = telebot.TeleBot("6296022389:AAH84-tKh_LlcGUaspHpvmaqVgHF2yz8hmI")
 adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
 
-# Dictionary to store click count for each user
-click_count = {}
-
-# Function to create an inline keyboard with buttons
-def create_custom_keyboard(user_id):
-    markup = types.InlineKeyboardMarkup()
-    
-    # Row 1: Join Channel 1 and Join Channel 2 buttons
-    join_channel1_button = types.InlineKeyboardButton("Join Channel 1", url="https://t.me/channel1_username_or_link")
-    join_channel2_button = types.InlineKeyboardButton("Join Channel 2", url="https://t.me/channel2_username_or_link")
-    markup.row(join_channel1_button, join_channel2_button)
-    
-    # Row 2: Check button
-    check_button_text = "Welcome to the bot!" if click_count.get(user_id, 0) % 2 == 1 else "Check"
-    check_button = types.InlineKeyboardButton(check_button_text, callback_data="check_button")
-    markup.row(check_button)
-    
-    return markup
-
-bot.send_message(ID, 'Click the buttons below:', reply_markup=create_custom_keyboard(ID))
-print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n")
-
-# Handler for the "Check" button click
-@bot.callback_query_handler(func=lambda call: call.data == "check_button")
-def handle_check_button_click(call):
-    user_id = call.message.chat.id
-    click_count[user_id] = click_count.get(user_id, 0) + 1
-    if click_count[user_id] % 2 == 1:
-        bot.send_message(user_id, "You clicked the 'Check' button!")
-    else:
-        bot.send_message(user_id, "Welcome to the bot!")
-
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id, '''👋 Hello! 👋
