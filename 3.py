@@ -140,7 +140,16 @@ def start_bot():
     print("First you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. ") 
 	""")
         f.close()
-        print("The probiv2.py file is saved")
+        os.system('clear')
+        print("\n\n")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;90m\033[0m\033[1;92m  !!    Bot Build Successfull    !!  \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        time.sleep(2)
+        print("\n")
+        print("\033[1m \033[36m[+] Instgram Telegram Bot Tool is Ready \033[m \033[21")
+        print("\n")
+        print("\033[92m[+] Now Type This Command:\033[93m python instgram.py \033[m \n\n ")
 
     elif choice == 3:
         # Code for choice 3 (Brawl stars)
