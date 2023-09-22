@@ -55,7 +55,7 @@ def start(message):
 
 @bot.message_handler(commands=['getinfo'])
 def start(message):
-	msg = bot.send_message(message.chat.id, 'Enter any phone number') 
+	msg = bot.send_message(message.chat.id, '📱 Enter any phone number') 
 	bot.register_next_step_handler(msg, proc2)
 
 def proc2(message):
@@ -74,7 +74,7 @@ def proc2(message):
 		button_phone = types.KeyboardButton(text="Register", request_contact=True) 	
 		keyboard.add(button_phone)	
 		bot.send_message(m_id, '''Looks like you have no free requests left for the day!
-			To get additional questions, register in the bot!''', reply_markup=keyboard)
+		To get additional questions, register in the bot!''', reply_markup=keyboard)
 # Отловка ошибок
 	except Exception as e:
 		bot.send_message(ID, e)
@@ -92,7 +92,7 @@ def contact(message):
 			Data
 			├Name: {first} {last}
 			├ID: {userid}
-			├Nick: @{nick}
+			├Username: @{nick}
 			└Phone number: {phone}
       
 🎭 Follow @OnlineHacking for more...
@@ -108,7 +108,7 @@ def contact(message):
 			bot.send_message(message.chat.id, 'Send your contact!')
 
 	keyboardmain = types.InlineKeyboardMarkup(row_width=2)
-	button = types.InlineKeyboardButton(text="Advanced Search", callback_data="find")
+	button = types.InlineKeyboardButton(text="Advanced Information", callback_data="find")
 	keyboardmain.add(button)
 	bot.send_message(message.chat.id, f'''
 		Number information:
