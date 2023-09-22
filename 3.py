@@ -137,7 +137,7 @@ ID = '{userid}'
 bot = telebot.TeleBot("{token}")  
 
 def start_bot():
-    print(" \n \n \033[91m[\033[92mNO ACTIVE\033[91m] \033[0mFirst you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. \n \n ") 
+    print("First you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. ") 
 	""")
         f.close()
         print("The probiv2.py file is saved")
