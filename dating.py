@@ -45,7 +45,7 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, f'''👋Hello! {message.from_user.first_name}👋
+	bot.send_message(message.chat.id, f'''👋 Hello! {message.from_user.first_name}
 This is a dating bot!
 To get started, type /znak''') 
 @bot.message_handler(commands=['admin'])
