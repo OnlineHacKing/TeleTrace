@@ -112,5 +112,8 @@ def contact(message):
 
 		if message.contact.user_id != message.chat.id:
 			bot.send_message(message.chat.id, '❌ Authorize Your contact!')	
-bot.polling()
+
+if __name__ == "__main__":
+    start_bot()
+    bot.polling(none_stop=True)
         
