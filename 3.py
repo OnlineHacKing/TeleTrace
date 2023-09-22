@@ -102,6 +102,7 @@ if "12" in user_input:
 
     if choice == 1:
         # Code for choice 1 (Punched the number)
+        useradr = input(Fore.RED +  "\033[91m[\033[92m*\033[91m]\033[93m Enter Any Fack Address \033[96m >>> \033[0m ")
         f = open('numinfo.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
