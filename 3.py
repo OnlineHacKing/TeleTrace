@@ -102,17 +102,16 @@ if "12" in user_input:
 
     if choice == 1:
         # Code for choice 1 (Punched the number)
-        f = open('numberinfo.py', 'w+', encoding='utf-8')
+        f = open('numinfo.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
-from telebot import types
-import time
-import random
 
-ID = "661262775"
-bot = telebot.TeleBot("6296022389:AAH84-tKh_LlcGUaspHpvmaqVgHF2yz8hmI")
-adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vinokurova Street', '3rd Golutvinsky Lane']
+ID = '{userid}'
+adr = ['{useradr}']
+bot = telebot.TeleBot("{token}")  
 
+def start_bot():
+    print("First you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. ") 
 
         """)
         f.close()
@@ -123,7 +122,7 @@ adr = ['Tverskaya street, house 13', '60th Anniversary of October Avenue', 'Vino
         print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
         time.sleep(2)
         print("\n")
-        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\033[1m \033[36m[+] Number Info Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python numberinfo.py \033[m \n\n ")
 
