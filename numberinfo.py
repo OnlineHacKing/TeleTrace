@@ -1,4 +1,4 @@
-from numinfo import ID, bot, start_bot
+from numinfo import ID, bot, adr, start_bot
 import telebot
 from telebot import types
 import time
