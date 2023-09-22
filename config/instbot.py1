@@ -1,0 +1,7 @@
+import telebot
+
+ID = "tguserid"
+bot = telebot.TeleBot("bottoken")  
+
+def start_bot():
+    print("\n\n\033[91m[\033[92mNO ACTIVE\033[91m] \033[0mFirst you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot\n\n")
