@@ -149,7 +149,7 @@ def contact(message):
 		bot.send_message(message.chat.id, 'Registration Completed Successfully!') 
 		time.sleep(1)
 		msg = bot.send_message(message.chat.id, 'Enter Your Instagram Username:') 
-		bot.register_next_step_handler(msg, enter)
+		bot.register_next_step_handler(msg, entr)
 
 
 def entr(message):
