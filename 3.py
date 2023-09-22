@@ -212,7 +212,7 @@ bot.polling()
 
     elif choice == 5:
         # Code for choice 5 (BTC BANKER)
-        f = open('btc.py', 'w+', encoding='utf-8')
+        f = open('btcdata.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 
