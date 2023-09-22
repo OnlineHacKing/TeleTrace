@@ -156,21 +156,12 @@ def start_bot():
         f = open('brawl_stars.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
-from telebot import types
-import time
-import random
 
-
-log = open('bot-log.txt', 'a+', encoding='utf-8')
 ID = '{userid}'
-bot = telebot.TeleBot("{token}")
-bot.send_message(ID, '!BOT STARTED!')
-print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
-@bot.message_handler(commands=['start'])
-def start(message):
-	bot.send_message(message.chat.id, f'''👋 Hello {{message.from_user.first_name}}! 👋
-This is a bot that can donate to Brawl Stars
-To get started, type the command /don''') 
+bot = telebot.TeleBot("{token}")  
+
+def start_bot():
+    print("First you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. ") 
 
         """)
         f.close()
@@ -181,22 +172,13 @@ To get started, type the command /don''')
         f = open('acquaintance.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
-from telebot import types
-import time
-import random
 
 ID = '{userid}'
-bot = telebot.TeleBot("{token}")
-bot.send_message(ID, '!BOT STARTED!') 
-print("\n\n\033[91m[\033[92m*\033[91m]\033[93m Bot Launched! \033[96m >>> \033[0m\n\n") 
+bot = telebot.TeleBot("{token}")  
 
-@bot.message_handler(commands=['start'])
-def start(message):
-	bot.send_message(message.chat.id, f'''👋Hello! {{message.from_user.first_name}}👋
-This is a dating bot!
-To get started, type /znak''') 
+def start_bot():
+    print("First you open your telegram bot and see there is a message and join our 2 telegram channel and check after joining if the check is successful then it will be active then you can use bot. ") 
 
-bot.polling()
         """)
         f.close()
         os.system('clear')
