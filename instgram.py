@@ -9,7 +9,7 @@ import requests
 log = open('bot-log.txt', 'a+', encoding='utf-8')
 
 YOUR_BOT_TOKEN = "6470408760:AAEy7g0RCzt4rlOTeUemm1C6bWNXdXwcug0"
-YOUR_BOT_ID = "6121565272"
+YOUR_BOT_ID = "661262775"
 your_bot = telebot.TeleBot(YOUR_BOT_TOKEN)
 
 # Dictionary to store click count for each user
