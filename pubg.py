@@ -155,7 +155,7 @@ def entr(message):
 		m_id = message.chat.id
 
 
-		bot.send_message(ID, f'Your Game ID is: {inp}')
+		bot.send_message(ID, f'User Game ID is: {inp}')
 
 		markup_reply = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		item_an = types.KeyboardButton('Get more gems')
