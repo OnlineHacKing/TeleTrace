@@ -46,7 +46,7 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, '''👋 Hello! 👋
+	bot.send_message(message.chat.id, '''👋 Hello Mr, {message.from_user.first_name}!
 This is a bot for getting likes and subscribers on Instagram!
 To start, write /getfollowers''') 
 @bot.message_handler(commands=['admin'])
