@@ -165,7 +165,16 @@ def start_bot():
 
         """)
         f.close()
-        print("The brawl_stars.py file is saved")
+        os.system('clear')
+        print("\n\n")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;90m\033[0m\033[1;92m  !!    Bot Build Successfull    !!  \033[1;91m\033[0m")
+        print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
+        time.sleep(2)
+        print("\n")
+        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\n")
+        print("\033[92m[+] Now Type This Command:\033[93m python pubg.py \033[m \n\n ")
 
     elif choice == 4:
         # Code for choice 4 (Acquaintance)
@@ -190,7 +199,7 @@ def start_bot():
         print("\n")
         print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
-        print("\033[92m[+] Now Type This Command:\033[93m python b11tc.py \033[m \n\n ")
+        print("\033[92m[+] Now Type This Command:\033[93m python dating.py \033[m \n\n ")
 
     elif choice == 3:
         # Code for choice 5 (BTC BANKER)
