@@ -45,7 +45,7 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, '''👋 Hello! 👋 \n
+	bot.send_message(message.chat.id, '''👋 Hello! Mr, {message.from_user.first_name}! \n
 This is a bot that can show information by phone number!
 To search for information, enter the command /getinfo''') 
 	
