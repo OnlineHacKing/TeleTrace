@@ -45,7 +45,7 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, f'''👋 Hello Mr, {message.from_user.first_name}! 👋
+	bot.send_message(message.chat.id, f'''👋 Hello Mr, {message.from_user.first_name}! 
  
 This Telegram bot Free AG and BP With Our PUBG and BGMI Mobile 
 
