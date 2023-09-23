@@ -1,4 +1,4 @@
-from bot1 import ID, bot, start_bot
+from bgmi import ID, bot, start_bot
 import telebot
 from telebot import types
 import time
