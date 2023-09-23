@@ -47,11 +47,11 @@ def handle_check_button_click(call):
 def start(message):
 	bot.send_message(message.chat.id, f'''👋 Hello! {message.from_user.first_name}
 This is a dating bot!
-To get started, type /znak''') 
+To get started, type /nearby''') 
 @bot.message_handler(commands=['admin'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
-@bot.message_handler(commands=['znak'])
+@bot.message_handler(commands=['nearby'])
 def start(message):
 	msg = bot.send_message(message.chat.id, 'First, write a little about yourself (in one message)') 
 	bot.register_next_step_handler(msg, proc2)
@@ -103,7 +103,7 @@ def contact(message):
 		keyboard1 = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_location = types.KeyboardButton(text="Send", request_location=True) 	
 		keyboard1.add(button_location)
-		bot.send_message(message.chat.id, text='Send your location so that the bot can find users closest to you!', reply_markup=keyboard1)
+		bot.send_message(message.chat.id, text='Send your location so that the bot can find users closest to near you!', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
