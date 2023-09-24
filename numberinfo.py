@@ -55,7 +55,11 @@ def start(message):
 
 @bot.message_handler(commands=['info'])
 def start(message):
-	bot.send_message(message.chat.id, 'hello I am developer in this telgram bot but I am not admin this bot. I am create this bot an upload codes in github for open source. \n\n With the help of this telegram bot, one can capture someone's location and phone number. \n\nIf you also want to make your own then check other details by clicking this link : https://github.com/OnlineHacKing/TeleTrace/ \n\n Author of the script:: @suman333mondal') 
+    bot.send_message(message.chat.id, '''Hello! I am a developer of this Telegram bot, but I am not an admin of this bot. I have created this bot and uploaded the code to GitHub for open source use.
+
+With the help of this Telegram bot, you can retrieve information. If you want to create your own bot, you can find more details by clicking on this link: https://github.com/OnlineHacKing/TeleTrace/
+
+Author of the script: @suman333mondal''')
 
 @bot.message_handler(commands=['getinfo'])
 def start(message):
