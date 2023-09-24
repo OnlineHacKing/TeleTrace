@@ -91,12 +91,13 @@ TeleTrace Tool Makes a Telegram bot that Steals Personal Data, such as Location 
 
 ### FEATURES :
 
-- Real Hacking !
 - Stealers Personal Data !
+- Added 5 new bots
 - Updated maintainence !
 - Custom Bot !
 - Easy for Beginners !
 - Beginners friendly !
+- Automatic formation of a data column
 - Multiple Bot options
   - Phone Number Info Bot
   - Instagram Like and Follower
