@@ -39,13 +39,13 @@
 
 <h3><p align="center">Disclaimer</p></h3>
 
-<i>Any actions and or activities related to <b>FreeFire-Phishing</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
+<i>Any actions and or activities related to <b>TeleTrace</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> if any criminal charges are brought against any individuals misusing this toolkit to break the law.
 
-<b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using,or in any other way utilizing this in a wrong way.
+<b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using, or in any other way utilizing this in the wrong way.
 
-<b>This Tool is made for educational purposes only</b>. Do not attempt to violate the law with anything contained here. <b>If this is your intention, then Get the hell out of here</b>!
+<b>This Tool is made for educational purposes only</b>. Please don't try to break the law with anything included here. <b>If this is your intention, get out of here</b>!
 
-It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</i>
+It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someone's social media</b>. However, you may try out this at your own risk.</i>
 
 ##
 
@@ -58,7 +58,7 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 
 ## ABOUT TOOL :
 
-FreeFire-Phishing IS A PHISING TOOL WICH IS USED TO PHISH A FREE FIRE ACCOUNT OF YOUR VICTIM. This tool works on both rooted Android device and Non-rooted Android device.
+TeleTrace Tool Makes a Telegram bot that Steals Personal Data, such as Location and Phone Number, through Phishing. This tool works on Telegram bot and build rooted Android device and Non-rooted Android device.
 
 ### AVAILABLE ON :
 
@@ -74,34 +74,36 @@ FreeFire-Phishing IS A PHISING TOOL WICH IS USED TO PHISH A FREE FIRE ACCOUNT OF
 
 * Arch Linux
 
+* Mac OS
+
 
 ### REQUIREMENTS :
 
 * Fast internet
 
-* php
+* python
 
-* ngrok token
+* telegram bot token
 
-* localxpose token
+* telegram chat ID
 
-* apache2
+* python module (colorama, telebot)
 
 ### FEATURES :
 
-- Real hacking of Account !
+- Real Hacking !
+- Stealers Personal Data !
 - Updated maintainence !
-- Custom link !
+- Custom Bot !
 - Easy for Beginners !
-- Beginners friendly
-- Multiple tunneling options
-  - Localhost
-  - Ngrok
-  - Cloudflared
-  - LocalXpose
-  - lhr.Life SSH
-- Mask URL support 
-- Latest and updated pages.
+- Beginners friendly !
+- Multiple Bot options
+  - Phone Number Info Bot
+  - Instagram Like and Follower
+  - BTC BANKER Bot
+  - Dating Bot
+  - Free AG and BP coin With PUBG and BGMI
+- Latest and updated bot.
 
 
 ### 🎥 WATCH VIDEO 
