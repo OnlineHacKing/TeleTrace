@@ -3,7 +3,7 @@ from colorama import Fore, Back, Style
 import os
 import time
 
-correct_number = "12"
+correct_number = "7478"
 os.system('clear')
 print(' ')
 print(' ')
@@ -68,7 +68,7 @@ if "12" in user_input:
     print("                ██║   ██║  ██║██║  ██║╚██████╗███████╗")
     print("                ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝")                                      
     print("\033[95;1m \033[0m\n")
-    print("\033[1;33m\033[0m\033[1;31m  ██████████\033[0m\033[1;37m██████████\033[1;33m\033[0m\033[0;32m██████████\033[0m \033[1;32m\033[0m\033[1;33m TELE TRACE HACKING BOT \033[0m\033[1;37m\033[0m\033[1;37m [v 1.1] \033[0m")
+    print("\033[1;33m\033[0m\033[1;31m  ██████████\033[0m\033[1;37m██████████\033[1;33m\033[0m\033[0;32m██████████\033[0m \033[1;32m\033[0m\033[1;33m TELE TRACE HACKING BOT \033[0m\033[1;37m\033[0m\033[1;37m [v 2.1] \033[0m")
     print("")
     print("\033[1;33m\033[0m\033[1;33m  [\033[0m\033[1;32m Github :- \033[36mhttps://github.com/OnlineHacKing/TeleTrace \033[0m\033[1;32m\033[0m\033[1;33m] \033[0m")
     print("")
@@ -172,7 +172,7 @@ def start_bot():
         print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
         time.sleep(2)
         print("\n")
-        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\033[1m \033[36m[+] PUBG BGMI Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python pubg.py \033[m \n\n ")
 
@@ -197,7 +197,7 @@ def start_bot():
         print("\033[1;91m\033[0m\033[1;33m\033[0m\033[1;96m\033[0m\033[1;92m  ---------------------------------   \033[1;91m\033[0m")
         time.sleep(2)
         print("\n")
-        print("\033[1m \033[36m[+] BTC Telegram Bot Tool is Ready \033[m \033[21")
+        print("\033[1m \033[36m[+] Dating Telegram Bot Tool is Ready \033[m \033[21")
         print("\n")
         print("\033[92m[+] Now Type This Command:\033[93m python dating.py \033[m \n\n ")
 
