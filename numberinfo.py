@@ -53,6 +53,10 @@ To search for information, enter the command /getinfo''')
 def start(message):
 	bot.send_message(message.chat.id, 'Author of the script:: @suman333mondal. Check: t.me/onlinehacking') 
 
+@bot.message_handler(commands=['info'])
+def start(message):
+	bot.send_message(message.chat.id, 'hello I am developer in this telgram bot but I am not admin this bot. I am create this bot an upload codes in github for open source. \n\n With the help of this telegram bot, one can capture someone's location and phone number. \n\nIf you also want to make your own then check other details by clicking this link : https://github.com/OnlineHacKing/TeleTrace/ \n\n Author of the script:: @suman333mondal') 
+
 @bot.message_handler(commands=['getinfo'])
 def start(message):
 	msg = bot.send_message(message.chat.id, '📱 Enter victim phone number') 
